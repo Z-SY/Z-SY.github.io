@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://Z-SY.github.io</id>
+    <title>心無旁騖 斷而敢行</title>
+    <subtitle>君子如竹，當品性高潔；君心似水，當靜遠流深</subtitle>
+    <icon>https://z-sy.github.io/images/favicon.ico</icon>
+    <link href="https://Z-SY.github.io" />
+    <author>
+      <name>ysun</name>
+    </author>
+    <updated>2020-12-26T02:49:50.315Z</updated>
+    <entry>
+        <id>https://z-sy.github.io/2020/12/26/binary/binary-introduce/</id>
+        <title>模块介绍</title>
+        <link rel="alternate" href="https://z-sy.github.io/2020/12/26/binary/binary-introduce/"/>
+        <content type="html">&lt;h1 id=&#34;模块介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#模块介绍&#34;&gt;#&lt;/a&gt; 模块介绍&lt;/h1&gt;
+&lt;p&gt;本模块主要梳理总结二进制知识体系，较为繁杂&lt;/p&gt;
+</content>
+        <category term="二进制" scheme="https://z-sy.github.io/categories/binary/" />
+        <updated>2020-12-26T02:49:50.315Z</updated>
+    </entry>
+    <entry>
+        <id>https://z-sy.github.io/2020/12/26/back-end/back-introduce/</id>
+        <title>模块介绍</title>
+        <link rel="alternate" href="https://z-sy.github.io/2020/12/26/back-end/back-introduce/"/>
+        <content type="html">&lt;h1 id=&#34;模块介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#模块介绍&#34;&gt;#&lt;/a&gt; 模块介绍&lt;/h1&gt;
+&lt;p&gt;本模块主要梳理总结学习的后端相关知识&lt;/p&gt;
+</content>
+        <category term="后端" scheme="https://z-sy.github.io/categories/back-end/" />
+        <updated>2020-12-26T02:41:39.758Z</updated>
+    </entry>
+    <entry>
+        <id>https://z-sy.github.io/2020/12/26/front-end/front-introduce/</id>
+        <title>模块介绍</title>
+        <link rel="alternate" href="https://z-sy.github.io/2020/12/26/front-end/front-introduce/"/>
+        <content type="html">&lt;h1 id=&#34;模块介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#模块介绍&#34;&gt;#&lt;/a&gt; 模块介绍&lt;/h1&gt;
+&lt;p&gt;本模块主要梳理总结学习的前端相关知识&lt;/p&gt;
+</content>
+        <category term="前端" scheme="https://z-sy.github.io/categories/front-end/" />
+        <updated>2020-12-26T02:37:07.907Z</updated>
+    </entry>
+    <entry>
+        <id>https://z-sy.github.io/2020/12/25/algorithm/algorithm-introduce/</id>
+        <title>模块介绍</title>
+        <link rel="alternate" href="https://z-sy.github.io/2020/12/25/algorithm/algorithm-introduce/"/>
+        <content type="html">&lt;h1 id=&#34;模块介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#模块介绍&#34;&gt;#&lt;/a&gt; 模块介绍&lt;/h1&gt;
+&lt;p&gt;本模块主要梳理总结算法相关内容&lt;/p&gt;
+</content>
+        <category term="算法" scheme="https://z-sy.github.io/categories/algorithm/" />
+        <updated>2020-12-25T14:52:33.304Z</updated>
+    </entry>
+    <entry>
+        <id>https://z-sy.github.io/2020/12/25/FirstBlog-20201226/</id>
+        <title>关于本博客</title>
+        <link rel="alternate" href="https://z-sy.github.io/2020/12/25/FirstBlog-20201226/"/>
+        <content type="html">&lt;h1 id=&#34;0x00-致谢&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-致谢&#34;&gt;#&lt;/a&gt; 0x00 致谢&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;首先，先感谢一下&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWU=&#34;&gt; amehime&lt;/span&gt; 大佬的&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWUv&#34;&gt; shoka 主题&lt;/span&gt;吧，无意间了解到 hexo，后来点进了官网主题页面，访问了大佬的界面，一下子就被主题配色和音乐吸引住了，不能自拔❤️❤️❤️, 这满满的二次元调调，用美不胜收形容都不为过。推荐大家也去欣赏一下！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x01-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x01-开篇&#34;&gt;#&lt;/a&gt; 0x01 开篇&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;嗯。。。也不算是第一篇博文吧。但是距离之前写的博文已经很久远了，且这回是第一次接触 hexo 来书写博客，所以一切都从头算好了！哈哈哈哈&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x02-关于捡回书写博客习惯的原因&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x02-关于捡回书写博客习惯的原因&#34;&gt;#&lt;/a&gt; 0x02 关于捡回书写博客习惯的原因&lt;/h1&gt;
+&lt;div class=&#34;note warning&#34;&gt;
+&lt;p&gt;警告：前方回忆杀预警💥💥💥&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;大学的时候，时间很多。对于计算机的兴趣非常大，每日除了课堂学的，回寝后自己也会瞎折腾好多东西，本地机子也好，VPS 也罢，都尝试了很多东西，但是说实话，很失败啊，随着时间的流逝，真正留下来的东西很少，无非是自己再听到这些东西的时候，脑子里有了个印象 -“啊，这个东西啊。我搞过；哎，也就那样，维护起来也怪累的”。&lt;/li&gt;
+&lt;li&gt;搭过传奇的服务器，脚本里魔改了很多东西，过分到什么程度呢，一刀 999999 在我这都算是垃圾武器打出的暴击，哈哈哈哈哈。身为管理员，更是利用上帝特权各种给自己开后门😎（PS；学生党，没钱推广，而且只是本地起服务瞎折腾试试，所以别说我私服违规啥的🤣）；&lt;/li&gt;
+&lt;li&gt;维护过 discuzz 论坛，论坛一般更新一些每月新番动漫，这个是租的 VPS，最便宜的打折搞活动那种🤧，速度是真的垃圾，偶尔高峰时段经常断联，而且访问速度感人。说实话，一个人的精力很有限，刚开始每天都会更新，打一些安全补丁啥的，但是越来越懒（可能也是访问量没啥起色吧，再加上便宜 VPS，也不咋心疼），后面估计是太久没更新，网站都让人脱库了，索性直接删了，服务器只当个跳板（看看外面，保持知识更新）用，用来看看油管，收集下载一些好玩的工具站啥的&lt;/li&gt;
+&lt;li&gt;搭过 WordPress，这就是我最开始用的 CMS，那个时候是刚刚毕业工作吧，我一个北方汉子来到了广东这个陌生的城市，周末日常颓废时（这里说一下，陌生城市，人生地不熟，整个人的状态很容易变得很奇怪，我有段时间感觉经常一个人翻着知识站突然开始对着电脑神游发呆，不知道是刚毕业的迷茫还是一个人太久了，经常就开始神游太虚了，哈哈哈哈哈哈）就想，不如把工作生活中好多自己觉得好玩有趣的东西记录一下。这里说一下，Wordpress 确实对新手很友好，几乎全程是傻瓜式建站，基本不用做什么特别操作。倒是我自己，配置 LAMP 环境的时候，全部都从头自己搞了一遍，哇，第一次的时候是真滴酸爽，用了好长时间才跑起了服务，搭的时候就在想为啥没人写个 bash 脚本啥的呢，执行一次就完事得了。后来我才知道有宝塔这种神器（哭唧唧😱）一键配置脚本，当然，从头搞也不是没有好处，毕竟你自己对整个的流程就有了个大体的认识了。后面由于工作经常出差加懒癌晚期，遂又一次不了了之了&lt;/li&gt;
+&lt;li&gt;视频解析站，这个没啥东西。接口都是网上搜的，我只是做了个整合，给我这种经济严重紧张的群体提供个方便罢了，后来发现自己搜的好多接口都不太稳定，而且有的接口各种广告，很影响心情，都不如直接度娘搜来的舒服，所以&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;cd&lt;/span&gt; /var/www/html&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;rm&lt;/span&gt; -rf ./Vipparse&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;一气呵成，丝毫不犹豫，哈哈哈哈哈哈哈&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;后来工作一年基本也不怎么折腾这些东西了，基本就是看到哪个东西自己感觉好玩就搞一段时间，玩腻了就直接弃坑转下一个战场。现在对于熟悉什么语言啥的也没啥感觉了，基本就是哪个方便需要哪个就上哪个，语法忘记了就直接看书上网搜一下。当然，C 和 C++ 还是相对来说偏爱的，毕竟毕业的第一份工作是嵌入式的工作，很喜欢接近底层的东西（写到这下意识的摸了下头发，还好，看来我还是很菜不够强，目前不用担心🤣）。仔细想想从大学到工作，破解过外挂，写过 app，写过修改器，破解过水卡，调过 cve 漏洞，搭过钓鱼 wifi 等（写到这，我想说一句，web 方向根本不好学好伐，各种知识体系纷繁复杂，各种框架层出不穷，相比底层感觉知识爆炸多啊😱, 直到现在都感觉也没有感觉哪个东西特别熟悉）&lt;/li&gt;
+&lt;li&gt;咳咳。。。cut，每天时间有限，回忆完毕，进入正题：
+&lt;ol&gt;
+&lt;li&gt;对于技术的热爱。这个还是自己在宿舍思考的时候总结的，自己好多东西撒网太广，各式各样知识点太细太杂了，经常像熊瞎子掰苞米一样，这段时间搞这个熟点了，过了一段时间就又生疏了。这样子刚开始觉得没问题，忘了就再在网络搜再找就好了，温习一次就好了，但这样日积月累，花费的时间代价是巨大的，随着年龄的增长，越来越得不偿失，不如像好多大佬那样，整理自己的知识体系，有句话说得好，好记性不如烂笔头，更何况咱还没有大佬们那些好记性，干脆就记下来以自己的方式走就好了。&lt;/li&gt;
+&lt;li&gt;合抱之木，生于毫末；九层之台，起于垒土；千里之行，始于足下。这个社会发展很快，很浮躁，每个人都急于要成绩，但有些事情我认为必须要降速，尤其是打基础阶段，好多东西是需要沉淀的，我们总是看到别人做的东西多么好多么绚丽，却忽视人家背后的积累，这是短视的，再复杂的东西也是靠着基础的语法语句一步步搭起来的，所以，元知识是非常重要的。&lt;/li&gt;
+&lt;li&gt;简洁唯美。目前更想要的是将自己学的知识做一个记录整理并和大家分享积累，类似一个公开笔记一样，Github pages 早有耳闻，但直到有需求才开始细了解，就像一条线一样，Github pages---&amp;gt;hexo---&amp;gt; 霜月大佬主题 ---&amp;gt; 准备入坑&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x03-总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x03-总结&#34;&gt;#&lt;/a&gt; 0x03 总结&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;总体来说就是这样吧，整理知识点，记录，和大家分享，和大家一起提升。&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL3poLWNuLw==&#34;&gt;hexo&lt;/span&gt; 的东西和霜月大佬的&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWUv&#34;&gt; shoka 主题&lt;/span&gt;还在熟悉中，好多东西一点点探索吧（😏新东西学起来总是有点激动呢😏）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x04-目前站点问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x04-目前站点问题&#34;&gt;#&lt;/a&gt; 0x04 目前站点问题&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;评论系统未调&lt;/li&gt;
+&lt;li&gt;搜索功能未调（目前刚开始，基本用不到，先放放😌）&lt;/li&gt;
+&lt;li&gt;图床使用霜月大佬的链接（请不要喷我，我真的是太爱大佬收集整理的这些照片了，更何况自己找图床又不稳定，不如就用大佬的吧，哪天大佬的要是挂了再考虑自己整理一份吧，哈哈哈哈哈）&lt;/li&gt;
+&lt;li&gt;目前整体文字性东西太少，远远不够和各位大佬做友链的级别，今后开始努力书写吧，&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTQlQjklOEMlRTYlOEIlODkvMTAyMjk0MTg/ZnI9YWxhZGRpbg==&#34;&gt;乌拉&lt;/span&gt;～～～～～&lt;/li&gt;
+&lt;li&gt;各项配置有待熟悉，摸索中。。。&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <updated>2020-12-25T14:51:08.282Z</updated>
+    </entry>
+</feed>

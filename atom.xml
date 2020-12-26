@@ -8,36 +8,46 @@
     <author>
       <name>ysun</name>
     </author>
-    <updated>2020-12-26T02:49:50.315Z</updated>
+    <updated>2020-12-26T10:18:22.000Z</updated>
     <entry>
-        <id>https://z-sy.github.io/2020/12/26/binary-binary-introduce/</id>
+        <id>https://z-sy.github.io/2020/12/26/front-end-2020-12-26-front-introduce/</id>
         <title>模块介绍</title>
-        <link rel="alternate" href="https://z-sy.github.io/2020/12/26/binary-binary-introduce/"/>
-        <content type="html">&lt;h1 id=&#34;模块介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#模块介绍&#34;&gt;#&lt;/a&gt; 模块介绍&lt;/h1&gt;
-&lt;p&gt;本模块主要梳理总结二进制知识体系，较为繁杂&lt;/p&gt;
-</content>
-        <category term="二进制" scheme="https://z-sy.github.io/categories/binary/" />
-        <updated>2020-12-26T02:49:50.315Z</updated>
-    </entry>
-    <entry>
-        <id>https://z-sy.github.io/2020/12/26/back-end-back-introduce/</id>
-        <title>模块介绍</title>
-        <link rel="alternate" href="https://z-sy.github.io/2020/12/26/back-end-back-introduce/"/>
-        <content type="html">&lt;h1 id=&#34;模块介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#模块介绍&#34;&gt;#&lt;/a&gt; 模块介绍&lt;/h1&gt;
-&lt;p&gt;本模块主要梳理总结学习的后端相关知识&lt;/p&gt;
-</content>
-        <category term="后端" scheme="https://z-sy.github.io/categories/back-end/" />
-        <updated>2020-12-26T02:41:39.758Z</updated>
-    </entry>
-    <entry>
-        <id>https://z-sy.github.io/2020/12/26/front-end-front-introduce/</id>
-        <title>模块介绍</title>
-        <link rel="alternate" href="https://z-sy.github.io/2020/12/26/front-end-front-introduce/"/>
-        <content type="html">&lt;h1 id=&#34;模块介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#模块介绍&#34;&gt;#&lt;/a&gt; 模块介绍&lt;/h1&gt;
+        <link rel="alternate" href="https://z-sy.github.io/2020/12/26/front-end-2020-12-26-front-introduce/"/>
+        <content type="html">&lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
 &lt;p&gt;本模块主要梳理总结学习的前端相关知识&lt;/p&gt;
 </content>
         <category term="前端" scheme="https://z-sy.github.io/categories/front-end/" />
-        <updated>2020-12-26T02:37:07.907Z</updated>
+        <updated>2020-12-26T10:18:22.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://z-sy.github.io/2020/12/26/binary-2020-12-26-binary-introduce/</id>
+        <title>模块介绍</title>
+        <link rel="alternate" href="https://z-sy.github.io/2020/12/26/binary-2020-12-26-binary-introduce/"/>
+        <content type="html">&lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
+&lt;p&gt;本模块主要梳理总结二进制知识体系，较为繁杂&lt;/p&gt;
+</content>
+        <category term="二进制" scheme="https://z-sy.github.io/categories/binary/" />
+        <updated>2020-12-26T10:18:21.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://z-sy.github.io/2020/12/26/back-end-2020-12-26-back-introduce/</id>
+        <title>模块介绍</title>
+        <link rel="alternate" href="https://z-sy.github.io/2020/12/26/back-end-2020-12-26-back-introduce/"/>
+        <content type="html">&lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
+&lt;p&gt;本模块主要梳理总结学习的后端相关知识&lt;/p&gt;
+</content>
+        <category term="后端" scheme="https://z-sy.github.io/categories/back-end/" />
+        <updated>2020-12-26T10:18:20.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://z-sy.github.io/2020/12/26/algorithm-2020-12-26-algorithm-introduce/</id>
+        <title>模块介绍</title>
+        <link rel="alternate" href="https://z-sy.github.io/2020/12/26/algorithm-2020-12-26-algorithm-introduce/"/>
+        <content type="html">&lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
+&lt;p&gt;本模块主要梳理总结算法相关内容&lt;/p&gt;
+</content>
+        <category term="算法" scheme="https://z-sy.github.io/categories/algorithm/" />
+        <updated>2020-12-26T10:18:19.000Z</updated>
     </entry>
     <entry>
         <id>https://z-sy.github.io/2020/12/26/FirstBlog/</id>
@@ -69,7 +79,7 @@
 &lt;ol&gt;
 &lt;li&gt;对于技术的热爱。这个还是自己在宿舍思考的时候总结的，自己好多东西撒网太广，各式各样知识点太细太杂了，经常像熊瞎子掰苞米一样，这段时间搞这个熟点了，过了一段时间就又生疏了。这样子刚开始觉得没问题，忘了就再在网络搜再找就好了，温习一次就好了，但这样日积月累，花费的时间代价是巨大的，随着年龄的增长，越来越得不偿失，不如像好多大佬那样，整理自己的知识体系，有句话说得好，好记性不如烂笔头，更何况咱还没有大佬们那些好记性，干脆就记下来以自己的方式走就好了。&lt;/li&gt;
 &lt;li&gt;合抱之木，生于毫末；九层之台，起于垒土；千里之行，始于足下。这个社会发展很快，很浮躁，每个人都急于要成绩，但有些事情我认为必须要降速，尤其是打基础阶段，好多东西是需要沉淀的，我们总是看到别人做的东西多么好多么绚丽，却忽视人家背后的积累，这是短视的，再复杂的东西也是靠着基础的语法语句一步步搭起来的，所以，元知识是非常重要的。&lt;/li&gt;
-&lt;li&gt;简洁唯美。目前更想要的是将自己学的知识做一个记录整理并和大家分享积累，类似一个公开笔记一样，Github pages 早有耳闻，但直到有需求才开始细了解，就像一条线一样，Github pages---&amp;gt;hexo---&amp;gt; 霜月大佬主题 ---&amp;gt; 准备入坑&lt;/li&gt;
+&lt;li&gt;简洁唯美。目前更想要的是将自己学的知识做一个记录整理并和大家分享积累，类似一个公开笔记一样，Github Pages 早有耳闻，但直到有需求才开始细了解，就像一条线一样，Github Pages---&amp;gt;hexo---&amp;gt; 霜月大佬主题 ---&amp;gt; 准备入坑&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -86,16 +96,6 @@
 &lt;li&gt;各项配置有待熟悉，摸索中。。。&lt;/li&gt;
 &lt;/ol&gt;
 </content>
-        <updated>2020-12-25T16:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://z-sy.github.io/2020/12/25/algorithm-algorithm-introduce/</id>
-        <title>模块介绍</title>
-        <link rel="alternate" href="https://z-sy.github.io/2020/12/25/algorithm-algorithm-introduce/"/>
-        <content type="html">&lt;h1 id=&#34;模块介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#模块介绍&#34;&gt;#&lt;/a&gt; 模块介绍&lt;/h1&gt;
-&lt;p&gt;本模块主要梳理总结算法相关内容&lt;/p&gt;
-</content>
-        <category term="算法" scheme="https://z-sy.github.io/categories/algorithm/" />
-        <updated>2020-12-25T14:52:33.304Z</updated>
+        <updated>2020-12-26T10:18:18.000Z</updated>
     </entry>
 </feed>

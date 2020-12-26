@@ -13,9 +13,9 @@
         <pubDate>Sat, 26 Dec 2020 10:49:50 +0800</pubDate>
         <lastBuildDate>Sat, 26 Dec 2020 10:49:50 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">https://z-sy.github.io/2020/12/26/binary/binary-introduce/</guid>
+            <guid isPermalink="true">https://z-sy.github.io/2020/12/26/binary-binary-introduce/</guid>
             <title>模块介绍</title>
-            <link>https://z-sy.github.io/2020/12/26/binary/binary-introduce/</link>
+            <link>https://z-sy.github.io/2020/12/26/binary-binary-introduce/</link>
             <category term="二进制" scheme="https://z-sy.github.io/categories/binary/" />
             <pubDate>Sat, 26 Dec 2020 10:49:50 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;模块介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#模块介绍&#34;&gt;#&lt;/a&gt; 模块介绍&lt;/h1&gt;
@@ -23,9 +23,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://z-sy.github.io/2020/12/26/back-end/back-introduce/</guid>
+            <guid isPermalink="true">https://z-sy.github.io/2020/12/26/back-end-back-introduce/</guid>
             <title>模块介绍</title>
-            <link>https://z-sy.github.io/2020/12/26/back-end/back-introduce/</link>
+            <link>https://z-sy.github.io/2020/12/26/back-end-back-introduce/</link>
             <category term="后端" scheme="https://z-sy.github.io/categories/back-end/" />
             <pubDate>Sat, 26 Dec 2020 10:41:39 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;模块介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#模块介绍&#34;&gt;#&lt;/a&gt; 模块介绍&lt;/h1&gt;
@@ -33,9 +33,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://z-sy.github.io/2020/12/26/front-end/front-introduce/</guid>
+            <guid isPermalink="true">https://z-sy.github.io/2020/12/26/front-end-front-introduce/</guid>
             <title>模块介绍</title>
-            <link>https://z-sy.github.io/2020/12/26/front-end/front-introduce/</link>
+            <link>https://z-sy.github.io/2020/12/26/front-end-front-introduce/</link>
             <category term="前端" scheme="https://z-sy.github.io/categories/front-end/" />
             <pubDate>Sat, 26 Dec 2020 10:37:07 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;模块介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#模块介绍&#34;&gt;#&lt;/a&gt; 模块介绍&lt;/h1&gt;
@@ -43,20 +43,10 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://z-sy.github.io/2020/12/25/algorithm/algorithm-introduce/</guid>
-            <title>模块介绍</title>
-            <link>https://z-sy.github.io/2020/12/25/algorithm/algorithm-introduce/</link>
-            <category term="算法" scheme="https://z-sy.github.io/categories/algorithm/" />
-            <pubDate>Fri, 25 Dec 2020 22:52:33 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;模块介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#模块介绍&#34;&gt;#&lt;/a&gt; 模块介绍&lt;/h1&gt;
-&lt;p&gt;本模块主要梳理总结算法相关内容&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://z-sy.github.io/2020/12/25/FirstBlog-20201226/</guid>
+            <guid isPermalink="true">https://z-sy.github.io/2020/12/26/FirstBlog/</guid>
             <title>关于本博客</title>
-            <link>https://z-sy.github.io/2020/12/25/FirstBlog-20201226/</link>
-            <pubDate>Fri, 25 Dec 2020 22:51:08 +0800</pubDate>
+            <link>https://z-sy.github.io/2020/12/26/FirstBlog/</link>
+            <pubDate>Sat, 26 Dec 2020 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;0x00-致谢&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-致谢&#34;&gt;#&lt;/a&gt; 0x00 致谢&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;首先，先感谢一下&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWU=&#34;&gt; amehime&lt;/span&gt; 大佬的&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWUv&#34;&gt; shoka 主题&lt;/span&gt;吧，无意间了解到 hexo，后来点进了官网主题页面，访问了大佬的界面，一下子就被主题配色和音乐吸引住了，不能自拔❤️❤️❤️, 这满满的二次元调调，用美不胜收形容都不为过。推荐大家也去欣赏一下！&lt;/li&gt;
@@ -99,6 +89,16 @@
 &lt;li&gt;目前整体文字性东西太少，远远不够和各位大佬做友链的级别，今后开始努力书写吧，&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTQlQjklOEMlRTYlOEIlODkvMTAyMjk0MTg/ZnI9YWxhZGRpbg==&#34;&gt;乌拉&lt;/span&gt;～～～～～&lt;/li&gt;
 &lt;li&gt;各项配置有待熟悉，摸索中。。。&lt;/li&gt;
 &lt;/ol&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://z-sy.github.io/2020/12/25/algorithm-algorithm-introduce/</guid>
+            <title>模块介绍</title>
+            <link>https://z-sy.github.io/2020/12/25/algorithm-algorithm-introduce/</link>
+            <category term="算法" scheme="https://z-sy.github.io/categories/algorithm/" />
+            <pubDate>Fri, 25 Dec 2020 22:52:33 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;模块介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#模块介绍&#34;&gt;#&lt;/a&gt; 模块介绍&lt;/h1&gt;
+&lt;p&gt;本模块主要梳理总结算法相关内容&lt;/p&gt;
  ]]></description>
         </item>
     </channel>

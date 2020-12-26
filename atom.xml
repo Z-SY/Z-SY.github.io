@@ -10,9 +10,9 @@
     </author>
     <updated>2020-12-26T02:49:50.315Z</updated>
     <entry>
-        <id>https://z-sy.github.io/2020/12/26/binary/binary-introduce/</id>
+        <id>https://z-sy.github.io/2020/12/26/binary-binary-introduce/</id>
         <title>模块介绍</title>
-        <link rel="alternate" href="https://z-sy.github.io/2020/12/26/binary/binary-introduce/"/>
+        <link rel="alternate" href="https://z-sy.github.io/2020/12/26/binary-binary-introduce/"/>
         <content type="html">&lt;h1 id=&#34;模块介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#模块介绍&#34;&gt;#&lt;/a&gt; 模块介绍&lt;/h1&gt;
 &lt;p&gt;本模块主要梳理总结二进制知识体系，较为繁杂&lt;/p&gt;
 </content>
@@ -20,9 +20,9 @@
         <updated>2020-12-26T02:49:50.315Z</updated>
     </entry>
     <entry>
-        <id>https://z-sy.github.io/2020/12/26/back-end/back-introduce/</id>
+        <id>https://z-sy.github.io/2020/12/26/back-end-back-introduce/</id>
         <title>模块介绍</title>
-        <link rel="alternate" href="https://z-sy.github.io/2020/12/26/back-end/back-introduce/"/>
+        <link rel="alternate" href="https://z-sy.github.io/2020/12/26/back-end-back-introduce/"/>
         <content type="html">&lt;h1 id=&#34;模块介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#模块介绍&#34;&gt;#&lt;/a&gt; 模块介绍&lt;/h1&gt;
 &lt;p&gt;本模块主要梳理总结学习的后端相关知识&lt;/p&gt;
 </content>
@@ -30,9 +30,9 @@
         <updated>2020-12-26T02:41:39.758Z</updated>
     </entry>
     <entry>
-        <id>https://z-sy.github.io/2020/12/26/front-end/front-introduce/</id>
+        <id>https://z-sy.github.io/2020/12/26/front-end-front-introduce/</id>
         <title>模块介绍</title>
-        <link rel="alternate" href="https://z-sy.github.io/2020/12/26/front-end/front-introduce/"/>
+        <link rel="alternate" href="https://z-sy.github.io/2020/12/26/front-end-front-introduce/"/>
         <content type="html">&lt;h1 id=&#34;模块介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#模块介绍&#34;&gt;#&lt;/a&gt; 模块介绍&lt;/h1&gt;
 &lt;p&gt;本模块主要梳理总结学习的前端相关知识&lt;/p&gt;
 </content>
@@ -40,19 +40,9 @@
         <updated>2020-12-26T02:37:07.907Z</updated>
     </entry>
     <entry>
-        <id>https://z-sy.github.io/2020/12/25/algorithm/algorithm-introduce/</id>
-        <title>模块介绍</title>
-        <link rel="alternate" href="https://z-sy.github.io/2020/12/25/algorithm/algorithm-introduce/"/>
-        <content type="html">&lt;h1 id=&#34;模块介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#模块介绍&#34;&gt;#&lt;/a&gt; 模块介绍&lt;/h1&gt;
-&lt;p&gt;本模块主要梳理总结算法相关内容&lt;/p&gt;
-</content>
-        <category term="算法" scheme="https://z-sy.github.io/categories/algorithm/" />
-        <updated>2020-12-25T14:52:33.304Z</updated>
-    </entry>
-    <entry>
-        <id>https://z-sy.github.io/2020/12/25/FirstBlog-20201226/</id>
+        <id>https://z-sy.github.io/2020/12/26/FirstBlog/</id>
         <title>关于本博客</title>
-        <link rel="alternate" href="https://z-sy.github.io/2020/12/25/FirstBlog-20201226/"/>
+        <link rel="alternate" href="https://z-sy.github.io/2020/12/26/FirstBlog/"/>
         <content type="html">&lt;h1 id=&#34;0x00-致谢&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-致谢&#34;&gt;#&lt;/a&gt; 0x00 致谢&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;首先，先感谢一下&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWU=&#34;&gt; amehime&lt;/span&gt; 大佬的&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWUv&#34;&gt; shoka 主题&lt;/span&gt;吧，无意间了解到 hexo，后来点进了官网主题页面，访问了大佬的界面，一下子就被主题配色和音乐吸引住了，不能自拔❤️❤️❤️, 这满满的二次元调调，用美不胜收形容都不为过。推荐大家也去欣赏一下！&lt;/li&gt;
@@ -96,6 +86,16 @@
 &lt;li&gt;各项配置有待熟悉，摸索中。。。&lt;/li&gt;
 &lt;/ol&gt;
 </content>
-        <updated>2020-12-25T14:51:08.282Z</updated>
+        <updated>2020-12-25T16:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://z-sy.github.io/2020/12/25/algorithm-algorithm-introduce/</id>
+        <title>模块介绍</title>
+        <link rel="alternate" href="https://z-sy.github.io/2020/12/25/algorithm-algorithm-introduce/"/>
+        <content type="html">&lt;h1 id=&#34;模块介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#模块介绍&#34;&gt;#&lt;/a&gt; 模块介绍&lt;/h1&gt;
+&lt;p&gt;本模块主要梳理总结算法相关内容&lt;/p&gt;
+</content>
+        <category term="算法" scheme="https://z-sy.github.io/categories/algorithm/" />
+        <updated>2020-12-25T14:52:33.304Z</updated>
     </entry>
 </feed>

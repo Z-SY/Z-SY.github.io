@@ -10,8 +10,57 @@
         </author>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Sat, 26 Dec 2020 18:18:22 +0800</pubDate>
-        <lastBuildDate>Sat, 26 Dec 2020 18:18:22 +0800</lastBuildDate>
+        <pubDate>Sun, 27 Dec 2020 23:17:07 +0800</pubDate>
+        <lastBuildDate>Sun, 27 Dec 2020 23:17:07 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://z-sy.github.io/2020/12/27/binary-2020-12-27-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-01/</guid>
+            <title>0day安全温习-01</title>
+            <link>https://z-sy.github.io/2020/12/27/binary-2020-12-27-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-01/</link>
+            <category term="二进制" scheme="https://z-sy.github.io/categories/binary/" />
+            <category term="0day安全" scheme="https://z-sy.github.io/tags/0day%E5%AE%89%E5%85%A8/" />
+            <pubDate>Sun, 27 Dec 2020 23:17:07 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;勉励语 - 精勤求学，敦笃励志&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x01-基础知识&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x01-基础知识&#34;&gt;#&lt;/a&gt; 0x01 基础知识&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;漏斗挖掘
+&lt;ul&gt;
+&lt;li&gt;安全性漏洞往往不会对软件本身功能造成很大影响，因此很难被 QA 工程师的功能性测试发现，对于进行 “正常操作” 的普通用户来说，更难体会到软件中的这类逻辑瑕疵。&lt;/li&gt;
+&lt;li&gt;从技术角度讲，所谓的漏洞挖掘更像是高级的 QA，一群精通二进制、汇编语言和操作系统底层知识的大手子没日没夜、精力旺盛的测试产品，寻找产品中的漏洞，敏锐的捕捉到程序中那些微笑细微的错误。大型的软件企业也会雇用一些安全专家来测试自己产品中的漏洞，这种测试工作可称 - Penetration test（攻击测试）；这些测试团队则被称做 Tiger team 或者 Ethic hacker。&lt;/li&gt;
+&lt;li&gt;工程界 - 普遍采用的方式是 Fuzz，实际是一种灰盒测试；学术界 - 侧重教导，一般采用静态分析。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;漏洞分析
+&lt;ul&gt;
+&lt;li&gt;分析漏洞时，如果能搜索到 POC 代码，就能重现漏洞现场；如果不能获得 POC，比较通用的方法是采用补丁比较器，比较 Patch 前后的可执行程序修改了哪些地方，然后再重点分析&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;漏洞利用
+&lt;ul&gt;
+&lt;li&gt;针对发现的漏斗，可部署相应的攻击代码测试代码，进行提权等操作。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;何为 0DAY - 零日漏洞
+&lt;ul&gt;
+&lt;li&gt;未被公布，未被修复的漏洞&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;何为 CVE-Common Vulnerabilities and Exposures-&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2N2ZS5taXRyZS5vcmcv&#34;&gt; http://cve.mitre.org/&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;CVE 会对每个公布的漏洞进行编号、审查。CVE 编号通常也是引用漏洞的&lt;br /&gt;
+标准方式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;何为 Exploit
+&lt;ul&gt;
+&lt;li&gt;漏斗利用，有漏洞不一定有 Exploit，但是有 Exploit 就一定有漏洞&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://z-sy.github.io/2020/12/26/front-end-2020-12-26-front-introduce/</guid>
             <title>模块介绍</title>

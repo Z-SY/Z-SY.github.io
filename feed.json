@@ -7,11 +7,22 @@
     "home_page_url": "https://Z-SY.github.io",
     "items": [
         {
+            "id": "https://z-sy.github.io/2020/12/28/binary-2020-12-28-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-02/",
+            "url": "https://z-sy.github.io/2020/12/28/binary-2020-12-28-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-02/",
+            "title": "0day安全温习-02",
+            "date_published": "2020-12-28T15:43:28.000Z",
+            "content_html": "<h1 id=\"0x00-开篇\"><a class=\"anchor\" href=\"#0x00-开篇\">#</a> 0x00 开篇</h1>\n<ul>\n<li><span class=\"kbd\">勉励语 - 风之积也不厚，则其负大翼也无力</span></li>\n</ul>\n<h1 id=\"0x01-基础\"><a class=\"anchor\" href=\"#0x01-基础\">#</a> 0x01 基础</h1>\n<ol>\n<li>PE 文件格式\n<ul>\n<li>PE 全称 - Portable Executable，是 Win32 平台下可执行文件遵守的数据格式。常见的可执行文件（如 “<em>.exe” 文件和 “</em>.dll” 文件）都是典型的 PE 文件。</li>\n</ul>\n</li>\n<li>待更新</li>\n</ol>\n",
+            "tags": [
+                "二进制",
+                "0day安全"
+            ]
+        },
+        {
             "id": "https://z-sy.github.io/2020/12/27/binary-2020-12-27-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-01/",
             "url": "https://z-sy.github.io/2020/12/27/binary-2020-12-27-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-01/",
             "title": "0day安全温习-01",
             "date_published": "2020-12-27T15:17:07.000Z",
-            "content_html": "<h1 id=\"0x00-开篇\"><a class=\"anchor\" href=\"#0x00-开篇\">#</a> 0x00 开篇</h1>\n<ul>\n<li><span class=\"kbd\">勉励语 - 精勤求学，敦笃励志</span></li>\n</ul>\n<h1 id=\"0x01-基础知识\"><a class=\"anchor\" href=\"#0x01-基础知识\">#</a> 0x01 基础知识</h1>\n<ol>\n<li>漏斗挖掘\n<ul>\n<li>安全性漏洞往往不会对软件本身功能造成很大影响，因此很难被 QA 工程师的功能性测试发现，对于进行 “正常操作” 的普通用户来说，更难体会到软件中的这类逻辑瑕疵。</li>\n<li>从技术角度讲，所谓的漏洞挖掘更像是高级的 QA，一群精通二进制、汇编语言和操作系统底层知识的大手子没日没夜、精力旺盛的测试产品，寻找产品中的漏洞，敏锐的捕捉到程序中那些微笑细微的错误。大型的软件企业也会雇用一些安全专家来测试自己产品中的漏洞，这种测试工作可称 - Penetration test（攻击测试）；这些测试团队则被称做 Tiger team 或者 Ethic hacker。</li>\n<li>工程界 - 普遍采用的方式是 Fuzz，实际是一种灰盒测试；学术界 - 侧重教导，一般采用静态分析。</li>\n</ul>\n</li>\n<li>漏洞分析\n<ul>\n<li>分析漏洞时，如果能搜索到 POC 代码，就能重现漏洞现场；如果不能获得 POC，比较通用的方法是采用补丁比较器，比较 Patch 前后的可执行程序修改了哪些地方，然后再重点分析</li>\n</ul>\n</li>\n<li>漏洞利用\n<ul>\n<li>针对发现的漏斗，可部署相应的攻击代码测试代码，进行提权等操作。</li>\n</ul>\n</li>\n<li>何为 0DAY - 零日漏洞\n<ul>\n<li>未被公布，未被修复的漏洞</li>\n</ul>\n</li>\n<li>何为 CVE-Common Vulnerabilities and Exposures-<span class=\"exturl\" data-url=\"aHR0cDovL2N2ZS5taXRyZS5vcmcv\"> http://cve.mitre.org/</span>\n<ul>\n<li>CVE 会对每个公布的漏洞进行编号、审查。CVE 编号通常也是引用漏洞的<br />\n标准方式</li>\n</ul>\n</li>\n<li>何为 Exploit\n<ul>\n<li>漏斗利用，有漏洞不一定有 Exploit，但是有 Exploit 就一定有漏洞</li>\n</ul>\n</li>\n</ol>\n",
+            "content_html": "<h1 id=\"0x00-开篇\"><a class=\"anchor\" href=\"#0x00-开篇\">#</a> 0x00 开篇</h1>\n<ul>\n<li><span class=\"kbd\">勉励语 - 精勤求学，敦笃励志</span></li>\n</ul>\n<h1 id=\"0x01-基础知识\"><a class=\"anchor\" href=\"#0x01-基础知识\">#</a> 0x01 基础知识</h1>\n<ol>\n<li>漏洞挖掘\n<ul>\n<li>安全性漏洞往往不会对软件本身功能造成很大影响，因此很难被 QA 工程师的功能性测试发现，对于进行 “正常操作” 的普通用户来说，更难体会到软件中的这类逻辑瑕疵。</li>\n<li>从技术角度讲，所谓的漏洞挖掘更像是高级的 QA，一群精通二进制、汇编语言和操作系统底层知识的大手子没日没夜、精力旺盛的测试产品，寻找产品中的漏洞，敏锐的捕捉到程序中那些微笑细微的错误。大型的软件企业也会雇用一些安全专家来测试自己产品中的漏洞，这种测试工作可称 - Penetration test（攻击测试）；这些测试团队则被称做 Tiger team 或者 Ethic hacker。</li>\n<li>工程界 - 普遍采用的方式是 Fuzz，实际是一种灰盒测试；学术界 - 侧重教导，一般采用静态分析。</li>\n</ul>\n</li>\n<li>漏洞分析\n<ul>\n<li>分析漏洞时，如果能搜索到 POC 代码，就能重现漏洞现场；如果不能获得 POC，比较通用的方法是采用补丁比较器，比较 Patch 前后的可执行程序修改了哪些地方，然后再重点分析。</li>\n</ul>\n</li>\n<li>漏洞利用\n<ul>\n<li>针对发现的漏洞，可部署相应的攻击代码测试代码，进行提权等操作。</li>\n</ul>\n</li>\n</ol>\n<h1 id=\"0x02-常用短语\"><a class=\"anchor\" href=\"#0x02-常用短语\">#</a> 0x02 常用短语</h1>\n<ol>\n<li>何为<span class=\"kbd\"> 0DAY</span> - 零日漏洞\n<ul>\n<li>未被公布，未被修复的漏洞。依次类推补丁刚刚发布的一段时间内，并非所有用户都能及时修复，故这种新公布的漏洞也有一定利用价值。有时把攻击这种刚刚被 patch 过的漏洞称为 1 day 攻击。（patch 发布后 1 天，叫做 1 day，5 天叫做 5 day，未发 patch 统称 0 day）</li>\n</ul>\n</li>\n<li>何为<span class=\"kbd\"> CVE</span>-<span class=\"exturl\" data-url=\"aHR0cDovL2N2ZS5taXRyZS5vcmcv\"> http://cve.mitre.org/</span>\n<ul>\n<li>英文全称是 “Common Vulnerabilities &amp; Exposures” 通用漏洞披露。CVE 就好像是一个字典表，为广泛认同的信息安全漏洞或者已经暴露出来的弱点给出一个公共的名称。</li>\n</ul>\n</li>\n<li>何为<span class=\"kbd\"> POC</span>\n<ul>\n<li>全称 'Proof of Concept'，中文概念验证，常指一段漏洞证明的代码。</li>\n</ul>\n</li>\n<li>何为<span class=\"kbd\"> EXP</span>\n<ul>\n<li>全称 'Exploit'，中文 ' 利用 '，指利用系统漏洞进行攻击的动作。</li>\n</ul>\n</li>\n<li>何为<span class=\"kbd\"> PayLoad</span>\n<ul>\n<li>中文 ' 有效载荷 '，指成功 exploit 之后真正在目标系统执行的代码或指令。</li>\n</ul>\n</li>\n<li>何为<span class=\"kbd\"> ShellCode</span>\n<ul>\n<li>简单翻译 'Shell 代码 '，是 Payload 的一种，由于其建立正向 / 反向 shell 而得名。</li>\n</ul>\n</li>\n</ol>\n",
             "tags": [
                 "二进制",
                 "0day安全"

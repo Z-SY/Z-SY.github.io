@@ -10,8 +10,30 @@
         </author>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Sun, 27 Dec 2020 23:17:07 +0800</pubDate>
-        <lastBuildDate>Sun, 27 Dec 2020 23:17:07 +0800</lastBuildDate>
+        <pubDate>Mon, 28 Dec 2020 23:43:28 +0800</pubDate>
+        <lastBuildDate>Mon, 28 Dec 2020 23:43:28 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://z-sy.github.io/2020/12/28/binary-2020-12-28-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-02/</guid>
+            <title>0day安全温习-02</title>
+            <link>https://z-sy.github.io/2020/12/28/binary-2020-12-28-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-02/</link>
+            <category term="二进制" scheme="https://z-sy.github.io/categories/binary/" />
+            <category term="0day安全" scheme="https://z-sy.github.io/tags/0day%E5%AE%89%E5%85%A8/" />
+            <pubDate>Mon, 28 Dec 2020 23:43:28 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;勉励语 - 风之积也不厚，则其负大翼也无力&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x01-基础&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x01-基础&#34;&gt;#&lt;/a&gt; 0x01 基础&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;PE 文件格式
+&lt;ul&gt;
+&lt;li&gt;PE 全称 - Portable Executable，是 Win32 平台下可执行文件遵守的数据格式。常见的可执行文件（如 “&lt;em&gt;.exe” 文件和 “&lt;/em&gt;.dll” 文件）都是典型的 PE 文件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;待更新&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://z-sy.github.io/2020/12/27/binary-2020-12-27-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-01/</guid>
             <title>0day安全温习-01</title>
@@ -25,7 +47,7 @@
 &lt;/ul&gt;
 &lt;h1 id=&#34;0x01-基础知识&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x01-基础知识&#34;&gt;#&lt;/a&gt; 0x01 基础知识&lt;/h1&gt;
 &lt;ol&gt;
-&lt;li&gt;漏斗挖掘
+&lt;li&gt;漏洞挖掘
 &lt;ul&gt;
 &lt;li&gt;安全性漏洞往往不会对软件本身功能造成很大影响，因此很难被 QA 工程师的功能性测试发现，对于进行 “正常操作” 的普通用户来说，更难体会到软件中的这类逻辑瑕疵。&lt;/li&gt;
 &lt;li&gt;从技术角度讲，所谓的漏洞挖掘更像是高级的 QA，一群精通二进制、汇编语言和操作系统底层知识的大手子没日没夜、精力旺盛的测试产品，寻找产品中的漏洞，敏锐的捕捉到程序中那些微笑细微的错误。大型的软件企业也会雇用一些安全专家来测试自己产品中的漏洞，这种测试工作可称 - Penetration test（攻击测试）；这些测试团队则被称做 Tiger team 或者 Ethic hacker。&lt;/li&gt;
@@ -34,28 +56,45 @@
 &lt;/li&gt;
 &lt;li&gt;漏洞分析
 &lt;ul&gt;
-&lt;li&gt;分析漏洞时，如果能搜索到 POC 代码，就能重现漏洞现场；如果不能获得 POC，比较通用的方法是采用补丁比较器，比较 Patch 前后的可执行程序修改了哪些地方，然后再重点分析&lt;/li&gt;
+&lt;li&gt;分析漏洞时，如果能搜索到 POC 代码，就能重现漏洞现场；如果不能获得 POC，比较通用的方法是采用补丁比较器，比较 Patch 前后的可执行程序修改了哪些地方，然后再重点分析。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;漏洞利用
 &lt;ul&gt;
-&lt;li&gt;针对发现的漏斗，可部署相应的攻击代码测试代码，进行提权等操作。&lt;/li&gt;
+&lt;li&gt;针对发现的漏洞，可部署相应的攻击代码测试代码，进行提权等操作。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;何为 0DAY - 零日漏洞
+&lt;/ol&gt;
+&lt;h1 id=&#34;0x02-常用短语&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x02-常用短语&#34;&gt;#&lt;/a&gt; 0x02 常用短语&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;何为&lt;span class=&#34;kbd&#34;&gt; 0DAY&lt;/span&gt; - 零日漏洞
 &lt;ul&gt;
-&lt;li&gt;未被公布，未被修复的漏洞&lt;/li&gt;
+&lt;li&gt;未被公布，未被修复的漏洞。依次类推补丁刚刚发布的一段时间内，并非所有用户都能及时修复，故这种新公布的漏洞也有一定利用价值。有时把攻击这种刚刚被 patch 过的漏洞称为 1 day 攻击。（patch 发布后 1 天，叫做 1 day，5 天叫做 5 day，未发 patch 统称 0 day）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;何为 CVE-Common Vulnerabilities and Exposures-&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2N2ZS5taXRyZS5vcmcv&#34;&gt; http://cve.mitre.org/&lt;/span&gt;
+&lt;li&gt;何为&lt;span class=&#34;kbd&#34;&gt; CVE&lt;/span&gt;-&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2N2ZS5taXRyZS5vcmcv&#34;&gt; http://cve.mitre.org/&lt;/span&gt;
 &lt;ul&gt;
-&lt;li&gt;CVE 会对每个公布的漏洞进行编号、审查。CVE 编号通常也是引用漏洞的&lt;br /&gt;
-标准方式&lt;/li&gt;
+&lt;li&gt;英文全称是 “Common Vulnerabilities &amp;amp; Exposures” 通用漏洞披露。CVE 就好像是一个字典表，为广泛认同的信息安全漏洞或者已经暴露出来的弱点给出一个公共的名称。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;何为 Exploit
+&lt;li&gt;何为&lt;span class=&#34;kbd&#34;&gt; POC&lt;/span&gt;
 &lt;ul&gt;
-&lt;li&gt;漏斗利用，有漏洞不一定有 Exploit，但是有 Exploit 就一定有漏洞&lt;/li&gt;
+&lt;li&gt;全称 &#39;Proof of Concept&#39;，中文概念验证，常指一段漏洞证明的代码。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;何为&lt;span class=&#34;kbd&#34;&gt; EXP&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;全称 &#39;Exploit&#39;，中文 &#39; 利用 &#39;，指利用系统漏洞进行攻击的动作。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;何为&lt;span class=&#34;kbd&#34;&gt; PayLoad&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;中文 &#39; 有效载荷 &#39;，指成功 exploit 之后真正在目标系统执行的代码或指令。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;何为&lt;span class=&#34;kbd&#34;&gt; ShellCode&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;简单翻译 &#39;Shell 代码 &#39;，是 Payload 的一种，由于其建立正向 / 反向 shell 而得名。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;

@@ -10,8 +10,49 @@
         </author>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Mon, 28 Dec 2020 23:43:28 +0800</pubDate>
-        <lastBuildDate>Mon, 28 Dec 2020 23:43:28 +0800</lastBuildDate>
+        <pubDate>Wed, 30 Dec 2020 23:32:35 +0800</pubDate>
+        <lastBuildDate>Wed, 30 Dec 2020 23:32:35 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://z-sy.github.io/2020/12/30/binary-2020-12-30-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-03/</guid>
+            <title>0day安全温习-03</title>
+            <link>https://z-sy.github.io/2020/12/30/binary-2020-12-30-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-03/</link>
+            <pubDate>Wed, 30 Dec 2020 23:32:35 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;勉励语 - 立志言为本，修身行乃先&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x01-逆向常用工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x01-逆向常用工具&#34;&gt;#&lt;/a&gt; 0x01 逆向常用工具&lt;/h1&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;包括但不限于&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;动态分析工具
+&lt;ul&gt;
+&lt;li&gt;OllyDbg&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;静态分析工具
+&lt;ul&gt;
+&lt;li&gt;IDA Pro&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;二进制编辑器
+&lt;ul&gt;
+&lt;li&gt;UltraEdit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x02-栈溢出原理与实践&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x02-栈溢出原理与实践&#34;&gt;#&lt;/a&gt; 0x02 栈溢出原理与实践&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;何为&lt;span class=&#34;kbd&#34;&gt;栈溢出&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;简单来说，缓冲区溢出就是在大缓冲区中的数据向小缓冲区复制的过程中，由于没有注意小缓冲区的边界，“撑爆” 了较小的缓冲区，从而冲掉了和小缓冲区相邻内存区域的其它数据而引起的内存问题。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x03-未完待续&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x03-未完待续&#34;&gt;#&lt;/a&gt; 0x03 未完，待续&lt;/h1&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://z-sy.github.io/2020/12/28/binary-2020-12-28-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-02/</guid>
             <title>0day安全温习-02</title>

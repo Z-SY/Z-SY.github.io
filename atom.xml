@@ -46,7 +46,16 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;0x03-明日更新&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x03-明日更新&#34;&gt;#&lt;/a&gt; 0x03 明日更新&lt;/h1&gt;
+&lt;h1 id=&#34;0x03-两个寄存器esp和ebp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x03-两个寄存器esp和ebp&#34;&gt;#&lt;/a&gt; 0x03 两个寄存器 ESP 和 EBP&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;* ESP-栈指针寄存器(extended stack po inter)，其内存放着一个指针，该指针永远指向系统栈最上面一个栈帧的栈顶。
+* EBP-基址指针寄存器(extended base pointer)，其内存放着一个指针，该指针永远指向系统栈最上面一个栈帧的底部。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;0x04-函数调用过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x04-函数调用过程&#34;&gt;#&lt;/a&gt; 0x04 函数调用过程&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;* 在形成函数栈帧一般要经历如下几个步骤：push操作进行参数入栈---&amp;gt;call调用进行下一条返回地址的入栈操作并跳入调用函数的代码区---&amp;gt;进入函数代码区后，一个push ebp记录当前栈帧，一个mov ebp，esp设置新栈帧的底部，一个sud esp，xxx抬高新栈帧的顶部，留出局部变量的空间。至此一个新栈帧形成。同理，函数返回步骤如下：保存返回值，通常放在EAX寄存器中---&amp;gt;弹出当前栈帧，恢复上一个栈帧。具体操作-首先根据堆栈平衡，给ESP加上栈帧的大小，降低栈顶，回收当前栈帧空间，其次将当前栈帧底部保存的前栈帧EBP数值弹入EBP寄存器，恢复出上一个栈帧的栈帧底部，将保存的call调用的下一条指令地址弹给EIP寄存器。完成了一个新栈帧的生命周期，创建和释放。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;进行缓冲出溢出实验注意事项 - 函数的调用约定和相关指令。一般，参数入栈顺序从右至左 - C、Syscall、Stdcall，其中 C 的恢复栈平衡位置在母函数，剩下的两个都在子函数。参数入栈顺序从左至右 - Basic、Fortran、Pascal，其恢复栈平衡的位置都在子函数中进行。在进行淹没溢出操作时候要注意！&lt;/p&gt;
+&lt;/div&gt;
 </content>
         <category term="二进制" scheme="https://z-sy.github.io/categories/binary/" />
         <category term="0day安全" scheme="https://z-sy.github.io/tags/0day%E5%AE%89%E5%85%A8/" />

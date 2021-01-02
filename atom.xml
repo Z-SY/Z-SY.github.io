@@ -8,7 +8,37 @@
     <author>
       <name>ysun</name>
     </author>
-    <updated>2020-12-30T15:32:35.000Z</updated>
+    <updated>2021-01-02T00:40:30.000Z</updated>
+    <entry>
+        <id>https://z-sy.github.io/2021/01/02/algorithm-2021-01-02-%E4%B8%80%E6%AC%A1%E5%8F%8B%E5%A5%BD%E7%9A%84%E5%AF%B9%E8%AF%9D/</id>
+        <title>一次友好的对话</title>
+        <link rel="alternate" href="https://z-sy.github.io/2021/01/02/algorithm-2021-01-02-%E4%B8%80%E6%AC%A1%E5%8F%8B%E5%A5%BD%E7%9A%84%E5%AF%B9%E8%AF%9D/"/>
+        <content type="html">&lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;勉励语 - 非淡泊无以明志，非宁静无以致远&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x01-问题-一次友好的对话&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x01-问题-一次友好的对话&#34;&gt;#&lt;/a&gt; 0x01 问题 - 一次友好的对话&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;输入 - 一个最多包含 n 个正整数的文件，每个数都小于 n，其中 n=10^7。如果在输入文件中有任何整数重复出现就是致命错误。没有其他数据与该整数相关联。&lt;/li&gt;
+&lt;li&gt;输出 - 按升序排列的输入整数的列表&lt;/li&gt;
+&lt;li&gt;约束 - 最多大约有 1MB 的内存空间可用，有充足的磁盘存储空间可用。运行时间最多几分钟，运行时间 10S 就不需要进一步优化了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x02-问题分析&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x02-问题分析&#34;&gt;#&lt;/a&gt; 0x02 问题分析&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;常见方式一般的以基于磁盘的&lt;span class=&#34;kbd&#34;&gt;归并排序&lt;/span&gt;为起点，但需对其进行调整，由于是对整数进行排序，可将原来两百行的程序减少为十几行，同时，程序将运行的更快，但是完成程序可能仍然需要几天时间。&lt;/li&gt;
+&lt;li&gt;另一种解决方案利用该问题的特殊性。如果每个号码都使用 7 字节来存储，那么在可用的 1MB 存储空间大约可存 143000 个号码。如果每个号码都使用 32 位整数来表示的话，在 1MB 的存储空间里就可以存储 250000 个号码。因此，可重复遍历输入文件 40 趟来完成排序。第一趟 - 0 至 249999；第二趟 - 250000 至 499999 依此类推。对于内存中的排序来讲&lt;span class=&#34;kbd&#34;&gt;快速排序&lt;/span&gt;相当高效，且该程序拥有所希望的特性 - 不必考虑使用中间磁盘文件，但为此付出的代价是读取输入文件 40 次。&lt;/li&gt;
+&lt;li&gt;综上两方优点 - 我们想要的读输入文件一次，且不使用中间文件。最终，问题归结为能否能够用大约 800 万个可用位来表示最多 1000 万个互异的整数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x03-应用算法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x03-应用算法&#34;&gt;#&lt;/a&gt; 0x03 应用算法&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;位图算法。BitMap 算法的核心思想是用 bit 数组来记录 0-1 两种状态，然后再将具体数据映射到这个比特数组的具体位置，这个比特位设置成 0 表示数据不存在，设置成 1 表示数据存在。&lt;/li&gt;
+&lt;li&gt;BitMap 算在在大量数据查询、去重等应用场景中使用的比较多，这个算法具有比较高的空间利用率。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight c&#34;&gt;&lt;figcaption data-lang=&#34;c&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;/* 伪代码 */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;/* phase 1: initialize set to empty */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;n&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  bit&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;/* phase 2: insert present elements into the set */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; each i in the input file&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  bit&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;/* phase 3: write sorted output */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;n&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; bit&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    write i on the output file&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+        <category term="算法" scheme="https://z-sy.github.io/categories/algorithm/" />
+        <category term="编程珠玑" scheme="https://z-sy.github.io/tags/%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91/" />
+        <updated>2021-01-02T00:40:30.000Z</updated>
+    </entry>
     <entry>
         <id>https://z-sy.github.io/2020/12/30/binary-2020-12-30-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-03/</id>
         <title>0day安全温习-03</title>

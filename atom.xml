@@ -76,6 +76,17 @@
         <updated>2021-01-03T09:36:26.000Z</updated>
     </entry>
     <entry>
+        <id>https://z-sy.github.io/2021/01/03/penetration-test-2021-01-03-penetration-test-introduce/</id>
+        <title>模块介绍</title>
+        <link rel="alternate" href="https://z-sy.github.io/2021/01/03/penetration-test-2021-01-03-penetration-test-introduce/"/>
+        <content type="html">&lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
+&lt;p&gt;本模块主要分享总结渗透测试的相关知识&lt;/p&gt;
+</content>
+        <category term="渗透测试" scheme="https://z-sy.github.io/categories/penetration-test/" />
+        <category term="BurpSuit" scheme="https://z-sy.github.io/tags/BurpSuit/" />
+        <updated>2021-01-03T09:36:25.000Z</updated>
+    </entry>
+    <entry>
         <id>https://z-sy.github.io/2021/01/02/algorithm-2021-01-02-%E4%B8%80%E6%AC%A1%E5%8F%8B%E5%A5%BD%E7%9A%84%E5%AF%B9%E8%AF%9D/</id>
         <title>一次友好的对话</title>
         <link rel="alternate" href="https://z-sy.github.io/2021/01/02/algorithm-2021-01-02-%E4%B8%80%E6%AC%A1%E5%8F%8B%E5%A5%BD%E7%9A%84%E5%AF%B9%E8%AF%9D/"/>
@@ -387,15 +398,5 @@
 &lt;/ol&gt;
 </content>
         <updated>2020-12-26T10:18:18.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://z-sy.github.io/2020/01/03/penetration-test-2021-01-03-penetration-test-introduce/</id>
-        <title>模块介绍</title>
-        <link rel="alternate" href="https://z-sy.github.io/2020/01/03/penetration-test-2021-01-03-penetration-test-introduce/"/>
-        <content type="html">&lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
-&lt;p&gt;本模块主要分享总结渗透测试的相关知识&lt;/p&gt;
-</content>
-        <category term="渗透测试" scheme="https://z-sy.github.io/categories/penetration-test/" />
-        <updated>2020-01-03T09:36:25.000Z</updated>
     </entry>
 </feed>

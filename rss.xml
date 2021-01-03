@@ -10,8 +10,74 @@
         </author>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Sat, 02 Jan 2021 08:40:30 +0800</pubDate>
-        <lastBuildDate>Sat, 02 Jan 2021 08:40:30 +0800</lastBuildDate>
+        <pubDate>Sun, 03 Jan 2021 17:36:26 +0800</pubDate>
+        <lastBuildDate>Sun, 03 Jan 2021 17:36:26 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://z-sy.github.io/2021/01/03/penetration-test-2021-01-03-BurpSuite/</guid>
+            <title>BurpSuite</title>
+            <link>https://z-sy.github.io/2021/01/03/penetration-test-2021-01-03-BurpSuite/</link>
+            <category term="渗透测试" scheme="https://z-sy.github.io/categories/penetration-test/" />
+            <category term="BurpSuit" scheme="https://z-sy.github.io/tags/BurpSuit/" />
+            <pubDate>Sun, 03 Jan 2021 17:36:26 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;勉励语 - 书山有路勤为径，学海无涯苦作舟&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x01-介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x01-介绍&#34;&gt;#&lt;/a&gt; 0x01 介绍&lt;/h1&gt;
+&lt;p&gt;BurpSuite 是进行 Web 应用安全测试集成平台。它将各种安全工具无缝地融合在一起，以支持整个测试过程中，从最初的映射和应用程序的攻击面分析，到发现和利用安全漏洞。其模块几乎包含整个安全测试过程，从最初对目标程序的信息采集，到漏洞扫描及其利用，多模块间高融合的配合，使得安全测试的过程更加高效。&lt;/p&gt;
+&lt;h1 id=&#34;0x02-主要模块&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x02-主要模块&#34;&gt;#&lt;/a&gt; 0x02 主要模块&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Dashboard&lt;/li&gt;
+&lt;li&gt;Proxy&lt;/li&gt;
+&lt;li&gt;Intruder&lt;/li&gt;
+&lt;li&gt;Repeater&lt;/li&gt;
+&lt;li&gt;Decoder&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;0x03-模块简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x03-模块简介&#34;&gt;#&lt;/a&gt; 0x03 模块简介&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Proxy&lt;/span&gt; - 代理模块作为 BurpSuite 的核心功能，拦截 HTTP/S 的代理服务器，作为一个在浏览器和目标应用程序之间的中间人，允许拦截，查看，修改在两个方向上的原始数据流。
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;intercept 选项&lt;/span&gt; - 用于显示修改 HTTP 请求及响应内容，并可以将拦截的 HTTP 请求快速发送至其他模块处理。
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Forward&lt;/span&gt; - 用于发送数据。当把所需要的 HTTP 请求编辑编辑完成后，手动发送数据。&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Drop&lt;/span&gt; - 将该请求包丢弃。&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Intercept is off/on&lt;/span&gt; - 拦截开关。当处于 off 状态下时，BurpSuite 会自动转发所拦截的所有请求；当处于 on 状态下时，BurpSuite 会将所有拦截所有符合规则的请求并将它显示出来等待编辑或其他操作。&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Action&lt;/span&gt; - 功能菜单，与右键菜单内容相同，在这可以将请求包发送到其他的模块或者对数据包进行其他的操作。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;http history 选项&lt;/span&gt; - 这里将记录经过代理服务器访问的所有请求，即使当 Intercept is off 时也会记录。记录包括：#(请求索引号)、Host (主机)、Method (请求方式)、URL (请求地址)、Params (参数)、Edited (编辑)、Status (状态)、Length (响应字节长度)、MIME type (响应的 MLME 类型)、Extension (地址文件扩展名)、Title (页面标题)、Comment (注释)、SSL、IP (目标 IP 地址)、Cookies、Time (发出请求时间)、Listener port (监听端口)。&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;WebSockets history 选项&lt;/span&gt; - 用于记录 WebSockets 的数据包，是 HTML5 中最强大的通信功能，定义了一个全双工的通信信道，只需 Web 上的一个 Socket 即可进行通信，能减少不必要的网络流量并降低网络延迟。&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Options 选项&lt;/span&gt; - 主要用于设置代理监听、请求和响应，拦截反应，匹配和替换，ssl 等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;在 BurpSuite 任何请求处，右键菜单选择 “Send to intruder” 选项，将自动发送到此模块下并自动相关内容。&lt;/p&gt;
+&lt;/div&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Intruder&lt;/span&gt; - 用于自动对 Web 应用程序自定义的攻击。它可以用来自动执行您的测试过程中可能出现的所有类型的任务。例如目录爆破，注入，密码爆破等。
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Target 选项&lt;/span&gt; - 用于配置目标服务器进行攻击的详细信息。
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Host&lt;/span&gt; - 这是目标服务器的 IP 地址或主机名。&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Port&lt;/span&gt; - 这是目标服务的端口号。&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Use HTTPS&lt;/span&gt; - 这指定的 SSL 是否应该被使用.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Positions 选项&lt;/span&gt; - 设置 Payloads 的插入点以及攻击类型（攻击模式）。&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Payloads 选项&lt;/span&gt; - 设置 payload，配置字典。&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Opetions 选项&lt;/span&gt; - 此选项卡包含了 request headers，request engine，attack results ，grep match，grep_extrack，grep payloads 和 redirections。可以发动攻击之前，在主要 Intruder 的 UI 上编辑这些选项，大部分设置也可以在攻击时对已在运行的窗口进行修改。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Repeater&lt;/span&gt; - 用于手动操作和发送个别 HTTP 请求，并分析应用程序的响应一个简单的工具。可以发送一个内部请求从 Burp 任何地方到 Repeater，修改请求并且发送。&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Decoder&lt;/span&gt; - 将原始数据转换成各种编码和哈希表的简单工具。它能够智能地识别多种编码格式采用启发式技术。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;0x04-补充链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x04-补充链接&#34;&gt;#&lt;/a&gt; 0x04 补充链接&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;本文主要摘选自&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vanNqbGl5YW5nL3AvMTA4NTMzMDcuaHRtbA==&#34;&gt; BurpSuite pro v2.0 使用入门教程&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://z-sy.github.io/2021/01/02/algorithm-2021-01-02-%E4%B8%80%E6%AC%A1%E5%8F%8B%E5%A5%BD%E7%9A%84%E5%AF%B9%E8%AF%9D/</guid>
             <title>一次友好的对话</title>
@@ -323,6 +389,16 @@
 &lt;li&gt;目前整体文字性东西太少，远远不够和各位大佬做友链的级别，今后开始努力书写吧，&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTQlQjklOEMlRTYlOEIlODkvMTAyMjk0MTg/ZnI9YWxhZGRpbg==&#34;&gt;乌拉&lt;/span&gt;～～～～～&lt;/li&gt;
 &lt;li&gt;各项配置有待熟悉，摸索中。。。&lt;/li&gt;
 &lt;/ol&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://z-sy.github.io/2020/01/03/penetration-test-2021-01-03-penetration-test-introduce/</guid>
+            <title>模块介绍</title>
+            <link>https://z-sy.github.io/2020/01/03/penetration-test-2021-01-03-penetration-test-introduce/</link>
+            <category term="渗透测试" scheme="https://z-sy.github.io/categories/penetration-test/" />
+            <pubDate>Fri, 03 Jan 2020 17:36:25 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
+&lt;p&gt;本模块主要分享总结渗透测试的相关知识&lt;/p&gt;
  ]]></description>
         </item>
     </channel>

@@ -8,7 +8,228 @@
     <author>
       <name>ysun</name>
     </author>
-    <updated>2021-01-03T09:36:26.000Z</updated>
+    <updated>2021-01-04T12:29:38.000Z</updated>
+    <entry>
+        <id>https://z-sy.github.io/2021/01/04/algorithm-2021-01-04-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E7%9A%84%E5%A8%81%E5%8A%9B/</id>
+        <title>基本操作的威力</title>
+        <link rel="alternate" href="https://z-sy.github.io/2021/01/04/algorithm-2021-01-04-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E7%9A%84%E5%A8%81%E5%8A%9B/"/>
+        <content type="html">&lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;勉励语 - 去留无意，闲看庭前花开花落；宠辱不惊，漫随天外云卷云舒&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x01-问题-一次友好的对话&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x01-问题-一次友好的对话&#34;&gt;#&lt;/a&gt; 0x01 问题 - 一次友好的对话&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;输入 - n 元一维向量&lt;/li&gt;
+&lt;li&gt;输出 - 向左旋转 i 个位置的 n 元一维向量&lt;/li&gt;
+&lt;li&gt;约束 - 仅使用几十个额外字节的内存空间，在正比于 n 的时间内完成向量的旋转&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x02-问题分析&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x02-问题分析&#34;&gt;#&lt;/a&gt; 0x02 问题分析&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;假设 n=8，i=3，向量 abcdefgh 旋转为向量 defghabc。简单的代码使用一个 n 元的中间向量在 n 步内可完成该工作。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x03-应用算法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x03-应用算法&#34;&gt;#&lt;/a&gt; 0x03 应用算法&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;将向量 x 中的前 i 个元素复制到一个临时数组中，接着将余下的 n-i 个元素左移 i 个位置，然后再将前 i 个元素从临时数组中复制到 x 中余下的位置。&lt;br /&gt;
+::: 性能分析&lt;br /&gt;
+这种方法使用了 i 个额外的位置，如果 i 很大则产生了过大的存储空间的消耗&lt;br /&gt;
+:::&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include&amp;lt;iostream&amp;gt;
+#include&amp;lt;string&amp;gt;
+using namespace std;
+ 
+int main()
+&amp;#123;
+    string s = &amp;quot;abcdefghijklmn&amp;quot;;
+    cout&amp;lt;&amp;lt; &amp;quot;The origin is: &amp;quot;&amp;lt;&amp;lt;s&amp;lt;&amp;lt; endl;
+    // 左移个数
+    int i;
+    cin&amp;gt;&amp;gt;i;
+    if(i&amp;gt;s.size())
+    &amp;#123;
+        i = i%s.size();
+    &amp;#125;
+    // 将前i个元素临时保存
+    string tmp(s,0,i);
+    // 将剩余的左移i个位置
+    for(int j=i;j&amp;lt;s.size();++j)
+    &amp;#123;
+        s[j-i] = s[j];
+    &amp;#125;
+    s = s.substr(0,s.size()-i) + tmp;
+    cout&amp;lt;&amp;lt; &amp;quot;The result is: &amp;quot;&amp;lt;&amp;lt;s&amp;lt;&amp;lt; endl;
+    return 0;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;定义一个函数将 x 向左旋转一个位置（其时间正比于 n），然后调用该函数 i 次。&lt;br /&gt;
+::: 性能分析&lt;br /&gt;
+这种方法虽然空间复杂度为 O (1)，但产生了过多的运行时间消耗&lt;br /&gt;
+:::&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include&amp;lt;iostream&amp;gt;
+#include&amp;lt;string&amp;gt;
+using namespace std;
+ 
+void rotateOnce(string &amp;amp;s)
+&amp;#123;
+    char tmp = s[0];
+    int i;
+    for(i=1; i&amp;lt;s.size(); ++i)
+    &amp;#123;
+        s[i-1] = s[i];
+    &amp;#125;
+    s[i-1] = tmp;
+&amp;#125;
+ 
+ 
+int main()
+&amp;#123;
+    string s = &amp;quot;abcdefghijklmn&amp;quot;;
+    cout &amp;lt;&amp;lt; &amp;quot;The origin is: &amp;quot; &amp;lt;&amp;lt; s &amp;lt;&amp;lt; endl;
+    // 左移个数
+    int i;
+    cin &amp;gt;&amp;gt; i;
+    if(i &amp;gt; s.size())
+    &amp;#123;
+        i = i%s.size();
+    &amp;#125;
+    // 调用函数i次
+    while(i--)
+    &amp;#123;
+        rotateOnce(s);
+    &amp;#125;
+    cout &amp;lt;&amp;lt; &amp;quot;The result is: &amp;quot;&amp;lt;&amp;lt; s &amp;lt;&amp;lt; endl;
+    return 0;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;移动 x [0] 到临时变量 t 中，然后移动 x [i] 到 x [0] 中，x [2i] 到 x [i]，依次类推，直到我们又回到 x [0] 的位置提取元素，此时改为从临时变量 t 中提取元素，然后结束该过程（当下标大于 n 时对 n 取模或者减去 n）。如果该过程没有移动全部的元素，就从 x [1] 开始再次进行移动，总共移动 i 和 n 的最大公约数次。&lt;br /&gt;
+::: 性能分析&lt;br /&gt;
+这种方法非常精巧，像书中所说的一样堪称巧妙的杂技表演。空间复杂度为 O (1)，时间复杂度为线性时间，满足问题的性能要求，但还不是最佳&lt;br /&gt;
+:::&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include&amp;lt;iostream&amp;gt;
+#include&amp;lt;string&amp;gt;
+using namespace std;
+ 
+// 欧几里德（辗转相除）算法求最大公约数
+int gcd(int i, int j)
+&amp;#123;
+    while(1)
+    &amp;#123;
+        if(i &amp;gt; j)
+        &amp;#123;
+            i = i%j;
+            if(i == 0)
+            &amp;#123;
+                return j;
+            &amp;#125;
+        &amp;#125;
+        if(j &amp;gt; i)
+        &amp;#123;
+            j = j%i;
+            if(j == 0)
+            &amp;#123;
+                return i;
+            &amp;#125;
+        &amp;#125;
+    &amp;#125;
+&amp;#125;
+ 
+int main()
+&amp;#123;
+    string s = &amp;quot;abcdefghijklmn&amp;quot;;
+    cout &amp;lt;&amp;lt; &amp;quot;The origin is: &amp;quot;&amp;lt;&amp;lt; s &amp;lt;&amp;lt; endl;
+    // 左移个数
+    int i;
+    cin &amp;gt;&amp;gt; i;
+    if(i &amp;gt; s.size())
+    &amp;#123;
+        i = i%s.size();
+    &amp;#125;
+    // 移动
+    char tmp;
+    int times = gcd(s.size(), i);
+    for(int j=0; j&amp;lt;times; ++j)
+    &amp;#123;
+        tmp = s[j];
+        int pre = j; // 记录上一次的位置
+        while(1)
+        &amp;#123;
+            int t = pre+i;
+            if(t &amp;gt;= s.size())
+                t = t-s.size();
+            if(t == j) // 直到tmp原来的位置j为止
+                break;
+            s[pre] = s[t];
+            pre = t;
+        &amp;#125;
+        s[pre] = tmp;
+    &amp;#125;
+    cout &amp;lt;&amp;lt; &amp;quot;The result is: &amp;quot;&amp;lt;&amp;lt; s &amp;lt;&amp;lt; endl;
+    return 0;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;旋转向量 x 实际上就是交换向量 ab 的两段，得到向量 ba，这里 a 代表 x 的前 i 个元素。假设 a 比 b 短。将 b 分割成 bl 和 br，使 br 的长度和 a 的长度一样。交换 a 和 br，将 ablbr 转换成 brbla。因为序列 a 已在它的最终位置了，所以我们可以集中精力交换 b 的两个部分了。由于这个新问题和原先的问题是一样的，所以我们以递归的方式进行解决。&lt;br /&gt;
+::: 性能分析&lt;br /&gt;
+这种方法可以得到优雅的程序，但是需要巧妙的代码，并且要进行一些思考才能看出它的效率足够高&lt;br /&gt;
+:::&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;//略
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;（最佳）将这个问题看做是把数组 ab 转换成 ba，同时假定我们拥有一个函数可以将数组中特定部分的元素逆序。从 ab 开始，首先对 a 求逆，得到 arb，然后对 b 求逆，得到 arbr。最后整体求逆，得到（arbr）r，也就是 ba。&lt;br /&gt;
+::: 性能分析&lt;br /&gt;
+求逆序的方法在时间和空间上都很高效，而且代码非常简短，很难出错&lt;br /&gt;
+:::&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include&amp;lt;iostream&amp;gt;
+#include&amp;lt;string&amp;gt;
+using namespace std;
+ 
+void reverse(string &amp;amp;s, int begin, int end)
+&amp;#123;
+    while(begin &amp;lt; end)
+    &amp;#123;
+        char tmp = s[begin];
+        s[begin] = s[end];
+        s[end] = tmp;
+        ++begin;
+        --end;
+    &amp;#125;
+&amp;#125;
+ 
+int main()
+&amp;#123;
+    string s = &amp;quot;abcdefghijklmn&amp;quot;;
+    cout &amp;lt;&amp;lt; &amp;quot;The origin is: &amp;quot;&amp;lt;&amp;lt; s &amp;lt;&amp;lt; endl;
+     
+    int i;
+    cin &amp;gt;&amp;gt; i;
+    if(i &amp;gt; s.size())
+    &amp;#123;
+        i = i%s.size();
+    &amp;#125;
+ 
+    reverse(s, 0, i-1);
+    reverse(s, i, s.size()-1);
+    reverse(s, 0, s.size()-1);
+ 
+    cout &amp;lt;&amp;lt; &amp;quot;The result is: &amp;quot;&amp;lt;&amp;lt; s &amp;lt;&amp;lt; endl;
+    return 0;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;0x04-补充链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x04-补充链接&#34;&gt;#&lt;/a&gt; 0x04 补充链接&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;本文主要摘选自&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vc29uZ2xlZS9wLzU3MzgxNDYuaHRtbA==&#34;&gt;神奕&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="算法" scheme="https://z-sy.github.io/categories/algorithm/" />
+        <category term="编程珠玑" scheme="https://z-sy.github.io/tags/%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91/" />
+        <updated>2021-01-04T12:29:38.000Z</updated>
+    </entry>
     <entry>
         <id>https://z-sy.github.io/2021/01/03/penetration-test-2021-01-03-BurpSuite/</id>
         <title>BurpSuite</title>

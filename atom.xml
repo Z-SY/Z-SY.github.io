@@ -18,9 +18,22 @@
 &lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;勉励语 - 积土而为山，积水而为海&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;0x01-介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x01-介绍&#34;&gt;#&lt;/a&gt; 0x01 介绍&lt;/h1&gt;
-&lt;p&gt;nc 命令&lt;/p&gt;
-&lt;h1 id=&#34;0x02-待更新&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x02-待更新&#34;&gt;#&lt;/a&gt; 0x02 待更新&lt;/h1&gt;
-</content>
+&lt;pre&gt;&lt;code&gt;* nc作用
+    * 实现任意TCP/UDP端口的侦听，nc可以作为server以TCP或UDP方式侦听指定端口
+    * 端口的扫描，nc可以作为client发起TCP或UDP连接
+    * 机器之间传输文件
+    * 机器之间网络测速
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;0x02-常用参数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x02-常用参数&#34;&gt;#&lt;/a&gt; 0x02 常用参数&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;* -l    用于指定nc将处于侦听模式。指定该参数，则意味着nc被当作server，侦听并接受连接，而非向其它地址发起连接。
+* -p    暂未用到（老版本的nc可能需要在端口号前加-p参数，下面测试环境是centos6.6，nc版本是nc-1.84，未用到-p参数）
+* -s    指定发送数据的源IP地址，适用于多网卡机
+* -u    指定nc使用UDP协议，默认为TCP
+* -v    输出交互或出错信息，新手调试时尤为有用
+* -w    超时秒数，后面跟数字
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;0x03-使用示例&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x03-使用示例&#34;&gt;#&lt;/a&gt; 0x03 使用示例&lt;/h1&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;#传输信息&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;root@bash&lt;span class=&#34;token comment&#34;&gt;#] nc -l -p 4444 #启动 tcp 端口 4444 并监听&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;root@bash&lt;span class=&#34;token comment&#34;&gt;#] nc -nv 1.1.1.1 4444 #连接服务器主机的 4444 端口&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;#传输文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;root@bash&lt;span class=&#34;token comment&#34;&gt;#] nc -l -p 4444 &gt; 1.mp4 #启动 tcp 端口 4444 并监听，收到的数据重定向到 1.mp4 文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;root@bash&lt;span class=&#34;token comment&#34;&gt;#] nc -nv 1.1.1.1 4444 &amp;lt; 1.mp4 -q 1 #连接服务器主机的 4444 端口，并传输 1.mp4 文件，-q 1 参数为传输完延迟 1 秒退出&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;#流媒体服务&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;root@bash&lt;span class=&#34;token comment&#34;&gt;#] cat 1.mp4 | nc -lp 333 #打开 1.mp4 文件并将数据流通过管道传输给 333 端口&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;root@bash&lt;span class=&#34;token comment&#34;&gt;#] nc -nv 1.1.1.1 333 | mpplayer -vo x11 -cache 3000 #连接 333 端口并接收数据传输到 mpplayer 播放器&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
         <category term="渗透测试" scheme="https://z-sy.github.io/categories/penetration-test/" />
         <category term="nc命令" scheme="https://z-sy.github.io/tags/nc%E5%91%BD%E4%BB%A4/" />
         <updated>2021-01-05T15:13:01.000Z</updated>

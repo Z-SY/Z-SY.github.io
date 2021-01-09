@@ -11,7 +11,7 @@
             "url": "https://z-sy.github.io/2021/01/07/penetration-test-2021-01-07-WireShark/",
             "title": "WireShark",
             "date_published": "2021-01-07T15:01:51.000Z",
-            "content_html": "<h1 id=\"0x00-开篇\"><a class=\"anchor\" href=\"#0x00-开篇\">#</a> 0x00 开篇</h1>\n<ul>\n<li><span class=\"kbd\">勉励语 - 志当存高远</span></li>\n</ul>\n<h1 id=\"0x01-介绍\"><a class=\"anchor\" href=\"#0x01-介绍\">#</a> 0x01 介绍</h1>\n<ul>\n<li>未完待续</li>\n</ul>\n",
+            "content_html": "<h1 id=\"0x00-开篇\"><a class=\"anchor\" href=\"#0x00-开篇\">#</a> 0x00 开篇</h1>\n<ul>\n<li><span class=\"kbd\">勉励语 - 志当存高远</span></li>\n</ul>\n<h1 id=\"0x01-介绍\"><a class=\"anchor\" href=\"#0x01-介绍\">#</a> 0x01 介绍</h1>\n<pre><code>* wireshark是非常流行的网络封包分析软件，功能十分强大。可以截取各种网络封包，显示网络封包的详细信息，开源软件。\n</code></pre>\n<div class=\"note info\">\n<p>为了安全考虑，wireshark 只能查看封包，而不能修改封包的内容，或者发送封包</p>\n</div>\n<h1 id=\"0x02-使用场景\"><a class=\"anchor\" href=\"#0x02-使用场景\">#</a> 0x02 使用场景</h1>\n<div class=\"note info\">\n<p>包括但不限于</p>\n</div>\n<pre><code>1. 网络管理员会使用wireshark来检查网络问题\n2. 软件测试工程师使用wireshark抓包，来分析自己测试的软件\n3. 从事socket编程的工程师会用wireshark来调试\n4. ...\n</code></pre>\n<h1 id=\"0x03-主要界面\"><a class=\"anchor\" href=\"#0x03-主要界面\">#</a> 0x03 主要界面</h1>\n<pre><code>1. Display Filter(显示过滤器)，  用于过滤\n2. Packet List Pane(封包列表)，显示捕获到的封包，有源地址和目标地址，端口号。颜色不同，代表\n3. Packet Details Pane(封包详细信息), 显示封包中的字段\n4. Dissector Pane(16进制数据)\n5. Miscellanous(地址栏，杂项)\n</code></pre>\n<h1 id=\"0x04\"><a class=\"anchor\" href=\"#0x04\">#</a> 0x04</h1>\n<pre><code>[官网链接](https://www.wireshark.org/)</code></pre>\n",
             "tags": [
                 "渗透测试",
                 "WireShark"

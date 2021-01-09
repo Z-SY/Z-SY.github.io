@@ -39,8 +39,10 @@
 4. Dissector Pane(16进制数据)
 5. Miscellanous(地址栏，杂项)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;0x04&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x04&#34;&gt;#&lt;/a&gt; 0x04&lt;/h1&gt;
-&lt;pre&gt;&lt;code&gt;[官网链接](https://www.wireshark.org/)&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;0x04-链接地址&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x04-链接地址&#34;&gt;#&lt;/a&gt; 0x04 链接地址&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud2lyZXNoYXJrLm9yZw==&#34;&gt;官网链接&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
         <category term="渗透测试" scheme="https://z-sy.github.io/categories/penetration-test/" />
         <category term="WireShark" scheme="https://z-sy.github.io/tags/WireShark/" />

@@ -10,8 +10,50 @@
         </author>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Thu, 07 Jan 2021 23:01:51 +0800</pubDate>
-        <lastBuildDate>Thu, 07 Jan 2021 23:01:51 +0800</lastBuildDate>
+        <pubDate>Sun, 10 Jan 2021 19:59:58 +0800</pubDate>
+        <lastBuildDate>Sun, 10 Jan 2021 19:59:58 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://z-sy.github.io/2021/01/10/penetration-test-2021-01-10-Shodan/</guid>
+            <title>Shodan</title>
+            <link>https://z-sy.github.io/2021/01/10/penetration-test-2021-01-10-Shodan/</link>
+            <category term="渗透测试" scheme="https://z-sy.github.io/categories/penetration-test/" />
+            <category term="被动信息收集" scheme="https://z-sy.github.io/tags/%E8%A2%AB%E5%8A%A8%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" />
+            <pubDate>Sun, 10 Jan 2021 19:59:58 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;勉励语 - 不登高山，不知天之高也；不临深溪，不知地之厚也&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x01-介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x01-介绍&#34;&gt;#&lt;/a&gt; 0x01 介绍&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Shodan 是一个搜索引擎，但它与 Google 这种搜索网址的搜索引擎不同，Shodan 是用来搜索网络空间中在线设备的，你可以通过 Shodan 搜索指定的设备，或者搜索特定类型的设备。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x02-过滤器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x02-过滤器&#34;&gt;#&lt;/a&gt; 0x02 过滤器&lt;/h1&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;简要列出，具体可查看 Shodan 官方文档&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;hostname：搜索指定的主机或域名，例如 hostname:&amp;quot;google&amp;quot;&lt;/li&gt;
+&lt;li&gt;port：搜索指定的端口或服务，例如 port:&amp;quot;21&amp;quot;&lt;/li&gt;
+&lt;li&gt;country：搜索指定的国家，例如 country:&amp;quot;CN&amp;quot;&lt;/li&gt;
+&lt;li&gt;city：搜索指定的城市，例如 city:&amp;quot;Hefei&amp;quot;&lt;/li&gt;
+&lt;li&gt;org：搜索指定的组织或公司，例如 org:&amp;quot;google&amp;quot;&lt;/li&gt;
+&lt;li&gt;isp：搜索指定的 ISP 供应商，例如 isp:&amp;quot;China Telecom&amp;quot;&lt;/li&gt;
+&lt;li&gt;product：搜索指定的操作系统 / 软件 / 平台，例如 product:&amp;quot;Apache httpd&amp;quot;&lt;/li&gt;
+&lt;li&gt;version：搜索指定的软件版本，例如 version:&amp;quot;1.6.2&amp;quot;&lt;/li&gt;
+&lt;li&gt;geo：搜索指定的地理位置，参数为经纬度，例如 geo:&amp;quot;31.8639, 117.2808&amp;quot;&lt;/li&gt;
+&lt;li&gt;before/after：搜索指定收录时间前后的数据，格式为 dd-mm-yy，例如 before:&amp;quot;11-11-15&amp;quot;&lt;/li&gt;
+&lt;li&gt;net：搜索指定的 IP 地址或子网，例如 net:&amp;quot;210.45.240.0/24&amp;quot;&lt;/li&gt;
+&lt;li&gt;等等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x03-官网&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x03-官网&#34;&gt;#&lt;/a&gt; 0x03 官网&lt;/h1&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;善于运用搜索引擎，收集开放信息&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuc2hvZGFuLmlv&#34;&gt;Shodan 官网链接&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://z-sy.github.io/2021/01/07/penetration-test-2021-01-07-WireShark/</guid>
             <title>WireShark</title>

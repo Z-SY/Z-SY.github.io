@@ -10,8 +10,21 @@
         </author>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Sun, 10 Jan 2021 19:59:58 +0800</pubDate>
-        <lastBuildDate>Sun, 10 Jan 2021 19:59:58 +0800</lastBuildDate>
+        <pubDate>Mon, 11 Jan 2021 23:04:51 +0800</pubDate>
+        <lastBuildDate>Mon, 11 Jan 2021 23:04:51 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://z-sy.github.io/2021/01/11/binary-2021-01-11-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-04/</guid>
+            <title>0day安全温习-04</title>
+            <link>https://z-sy.github.io/2021/01/11/binary-2021-01-11-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-04/</link>
+            <category term="二进制" scheme="https://z-sy.github.io/categories/binary/" />
+            <category term="0day安全" scheme="https://z-sy.github.io/tags/0day%E5%AE%89%E5%85%A8/" />
+            <pubDate>Mon, 11 Jan 2021 23:04:51 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;勉励语 - 知不足者好学，耻下问者自满&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://z-sy.github.io/2021/01/10/penetration-test-2021-01-10-Shodan/</guid>
             <title>Shodan</title>

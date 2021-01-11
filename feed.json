@@ -7,6 +7,17 @@
     "home_page_url": "https://Z-SY.github.io",
     "items": [
         {
+            "id": "https://z-sy.github.io/2021/01/11/binary-2021-01-11-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-04/",
+            "url": "https://z-sy.github.io/2021/01/11/binary-2021-01-11-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-04/",
+            "title": "0day安全温习-04",
+            "date_published": "2021-01-11T15:04:51.000Z",
+            "content_html": "<h1 id=\"0x00-开篇\"><a class=\"anchor\" href=\"#0x00-开篇\">#</a> 0x00 开篇</h1>\n<ul>\n<li><span class=\"kbd\">勉励语 - 知不足者好学，耻下问者自满</span></li>\n</ul>\n",
+            "tags": [
+                "二进制",
+                "0day安全"
+            ]
+        },
+        {
             "id": "https://z-sy.github.io/2021/01/10/penetration-test-2021-01-10-Shodan/",
             "url": "https://z-sy.github.io/2021/01/10/penetration-test-2021-01-10-Shodan/",
             "title": "Shodan",

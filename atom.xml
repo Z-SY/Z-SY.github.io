@@ -58,9 +58,15 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;勉励语 - 知不足者好学，耻下问者自满&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;0x01&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x01&#34;&gt;#&lt;/a&gt; 0x01&lt;/h1&gt;
-&lt;h1 id=&#34;0x02&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x02&#34;&gt;#&lt;/a&gt; 0x02&lt;/h1&gt;
-&lt;h1 id=&#34;0x03&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x03&#34;&gt;#&lt;/a&gt; 0x03&lt;/h1&gt;
+&lt;h1 id=&#34;0x01-修改邻接变量&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x01-修改邻接变量&#34;&gt;#&lt;/a&gt; 0x01 修改邻接变量&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;当了解函数调用的细节和栈中数据的分布情况，那么对结构进行一些特殊构造和破坏是可能的函数的局部变量在栈中一个挨着一个排列。如果这些局部变量中有数组之类的缓冲区，并且程序中存在数组越界的缺陷，那么越界的数组元素就有可能破坏栈中相邻变量的值，甚至破坏栈帧中所保存的 EBP 值、返回地址等重要数据。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x02-注意事项&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x02-注意事项&#34;&gt;#&lt;/a&gt; 0x02 注意事项&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;观察内存的时候应当注意 “内存数据” 与 “数值数据” 的区别。在我们的调试环境中，内存由低到高分布，您可以简单地把这种情形理解成 Win32 系统在内存中由低位向高位存储一个 4 字节的双字（DWORD），但在作为 “数值” 应用的时候，却是按照由高位字节向低位字节进行解释。这样一来，在我们的调试环境中，“内存数据” 中的 DWORD 和我们逻辑上使用的 “数值数据” 是按字节序逆序过的。&lt;/li&gt;
+&lt;li&gt;例如，变量 authenticated 在内存中存储为 0x 01 00 00 00，这个 “内存数据” 的双字会被计算机由高位向低位按字节解释成 “数值数据” 0x 00 00 00 01。出于便于阅读的目的，OllyDbg 在栈区显示的时候已经将内存中双字的字节序反转了，也就是说，栈区栏显示的是 “数值数据”，而不是原始的 “内存数据”，所以，在栈内看数据时，从左向右对于左边地址的偏移依次为 3、 2、1、0。&lt;/li&gt;
+&lt;/ul&gt;
 </content>
         <category term="二进制" scheme="https://z-sy.github.io/categories/binary/" />
         <category term="0day安全" scheme="https://z-sy.github.io/tags/0day%E5%AE%89%E5%85%A8/" />

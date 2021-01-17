@@ -10,8 +10,21 @@
         </author>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Tue, 12 Jan 2021 20:36:34 +0800</pubDate>
-        <lastBuildDate>Tue, 12 Jan 2021 20:36:34 +0800</lastBuildDate>
+        <pubDate>Sun, 17 Jan 2021 22:50:25 +0800</pubDate>
+        <lastBuildDate>Sun, 17 Jan 2021 22:50:25 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://z-sy.github.io/2021/01/17/binary-2021-01-17-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-05/</guid>
+            <title>0day安全温习-05</title>
+            <link>https://z-sy.github.io/2021/01/17/binary-2021-01-17-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-05/</link>
+            <category term="二进制" scheme="https://z-sy.github.io/categories/binary/" />
+            <category term="0day安全" scheme="https://z-sy.github.io/tags/0day%E5%AE%89%E5%85%A8/" />
+            <pubDate>Sun, 17 Jan 2021 22:50:25 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;勉励语 - 盛年不重来，一日难再晨&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://z-sy.github.io/2021/01/12/algorithm-2021-01-12-%E6%89%BE%E5%87%BA%E6%89%80%E6%9C%89%E5%8F%98%E4%BD%8D%E8%AF%8D%E5%88%86%E7%B1%BB/</guid>
             <title>找出所有变位词分类</title>

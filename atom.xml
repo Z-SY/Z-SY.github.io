@@ -8,7 +8,17 @@
     <author>
       <name>ysun</name>
     </author>
-    <updated>2021-01-17T14:50:25.000Z</updated>
+    <updated>2021-01-21T15:50:20.000Z</updated>
+    <entry>
+        <id>https://z-sy.github.io/2021/01/21/penetration-test-2021-01-21-%E4%B8%BB%E5%8A%A8%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</id>
+        <title>主动信息收集</title>
+        <link rel="alternate" href="https://z-sy.github.io/2021/01/21/penetration-test-2021-01-21-%E4%B8%BB%E5%8A%A8%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/"/>
+        <content type="html">&lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
+</content>
+        <category term="渗透测试" scheme="https://z-sy.github.io/categories/penetration-test/" />
+        <category term="主动信息收集" scheme="https://z-sy.github.io/tags/%E4%B8%BB%E5%8A%A8%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" />
+        <updated>2021-01-21T15:50:20.000Z</updated>
+    </entry>
     <entry>
         <id>https://z-sy.github.io/2021/01/17/binary-2021-01-17-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-05/</id>
         <title>0day安全温习-05</title>

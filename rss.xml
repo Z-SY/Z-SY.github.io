@@ -10,8 +10,18 @@
         </author>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Sun, 17 Jan 2021 22:50:25 +0800</pubDate>
-        <lastBuildDate>Sun, 17 Jan 2021 22:50:25 +0800</lastBuildDate>
+        <pubDate>Thu, 21 Jan 2021 23:50:20 +0800</pubDate>
+        <lastBuildDate>Thu, 21 Jan 2021 23:50:20 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://z-sy.github.io/2021/01/21/penetration-test-2021-01-21-%E4%B8%BB%E5%8A%A8%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</guid>
+            <title>主动信息收集</title>
+            <link>https://z-sy.github.io/2021/01/21/penetration-test-2021-01-21-%E4%B8%BB%E5%8A%A8%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</link>
+            <category term="渗透测试" scheme="https://z-sy.github.io/categories/penetration-test/" />
+            <category term="主动信息收集" scheme="https://z-sy.github.io/tags/%E4%B8%BB%E5%8A%A8%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" />
+            <pubDate>Thu, 21 Jan 2021 23:50:20 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://z-sy.github.io/2021/01/17/binary-2021-01-17-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-05/</guid>
             <title>0day安全温习-05</title>

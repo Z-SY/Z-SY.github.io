@@ -11,7 +11,7 @@
             "url": "https://z-sy.github.io/2021/01/21/penetration-test-2021-01-21-%E4%B8%BB%E5%8A%A8%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/",
             "title": "主动信息收集",
             "date_published": "2021-01-21T15:50:20.000Z",
-            "content_html": "<h1 id=\"0x00-开篇\"><a class=\"anchor\" href=\"#0x00-开篇\">#</a> 0x00 开篇</h1>\n",
+            "content_html": "<h1 id=\"0x00-开篇\"><a class=\"anchor\" href=\"#0x00-开篇\">#</a> 0x00 开篇</h1>\n<ul>\n<li><span class=\"kbd\">勉励语 - 学如不及，犹恐失之</span></li>\n</ul>\n<h1 id=\"0x01-开篇\"><a class=\"anchor\" href=\"#0x01-开篇\">#</a> 0x01 开篇</h1>\n<ul>\n<li>直接与目标系统交互，无法避免留下访问的痕迹</li>\n<li>一般多使用受控的电脑进行探测，如使用代理或者已被控制的主机。要做好被封杀的准备，同时过程中要记得迷惑对方，隐藏真实流量。</li>\n<li>发送不同的探测，判断目标状态</li>\n</ul>\n<h1 id=\"0x02-发现阶段\"><a class=\"anchor\" href=\"#0x02-发现阶段\">#</a> 0x02 发现阶段</h1>\n<ul>\n<li>作用：识别活着的主机</li>\n<li>对于协议层的二层发现来讲，扫描速度快、可靠但是缺点就是不可路由。</li>\n<li>ARP 协议\n<ul>\n<li>arping</li>\n<li>nmap</li>\n<li>Netdiscover</li>\n<li>等等</li>\n</ul>\n</li>\n<li>练习时候建议结合 WiresShark 软件，抓网卡包，结合协议定义理解</li>\n</ul>\n",
             "tags": [
                 "渗透测试",
                 "主动信息收集"

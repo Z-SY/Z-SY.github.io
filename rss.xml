@@ -20,6 +20,29 @@
             <category term="主动信息收集" scheme="https://z-sy.github.io/tags/%E4%B8%BB%E5%8A%A8%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" />
             <pubDate>Thu, 21 Jan 2021 23:50:20 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;勉励语 - 学如不及，犹恐失之&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x01-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x01-开篇&#34;&gt;#&lt;/a&gt; 0x01 开篇&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;直接与目标系统交互，无法避免留下访问的痕迹&lt;/li&gt;
+&lt;li&gt;一般多使用受控的电脑进行探测，如使用代理或者已被控制的主机。要做好被封杀的准备，同时过程中要记得迷惑对方，隐藏真实流量。&lt;/li&gt;
+&lt;li&gt;发送不同的探测，判断目标状态&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x02-发现阶段&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x02-发现阶段&#34;&gt;#&lt;/a&gt; 0x02 发现阶段&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;作用：识别活着的主机&lt;/li&gt;
+&lt;li&gt;对于协议层的二层发现来讲，扫描速度快、可靠但是缺点就是不可路由。&lt;/li&gt;
+&lt;li&gt;ARP 协议
+&lt;ul&gt;
+&lt;li&gt;arping&lt;/li&gt;
+&lt;li&gt;nmap&lt;/li&gt;
+&lt;li&gt;Netdiscover&lt;/li&gt;
+&lt;li&gt;等等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;练习时候建议结合 WiresShark 软件，抓网卡包，结合协议定义理解&lt;/li&gt;
+&lt;/ul&gt;
  ]]></description>
         </item>
         <item>

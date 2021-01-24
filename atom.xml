@@ -8,7 +8,48 @@
     <author>
       <name>ysun</name>
     </author>
-    <updated>2021-01-21T15:50:20.000Z</updated>
+    <updated>2021-01-24T10:15:34.000Z</updated>
+    <entry>
+        <id>https://z-sy.github.io/2021/01/24/binary-2021-01-24-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-06/</id>
+        <title>0day安全温习-06</title>
+        <link rel="alternate" href="https://z-sy.github.io/2021/01/24/binary-2021-01-24-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-06/"/>
+        <content type="html">&lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;勉励语 - 两句三年得，一吟双泪流&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x01-shellcode&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x01-shellcode&#34;&gt;#&lt;/a&gt; 0x01 ShellCode&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;1996 年，Aleph One 在 Underground 发表了著名论文 Smashing the Stack for Fun and Profit，其中详细描述了 Linux 系统中栈的结构和如何利用基于栈的缓冲区溢出。在这篇具有划时代意义的论文中，Aleph One 演示了如何向进程中植入一段用于获得 shell 的代码，并在论文中称这段被植入进程的代码为 “shellcode”。&lt;/li&gt;
+&lt;li&gt;后来人们干脆统一用 shellcode 这个专用术语来通称缓冲区溢出攻击中植入进程的代码。这段代码可以是出于恶作剧目的的弹出一个消息框，也可以是出于攻击目的的删改重要文件、窃取数据、上传木马病毒并运行，甚至是出于破坏目的的格式化硬盘等。请注意本章讨论的 shellcode 是这种广义上的植入进程的代码，而不是狭义上的仅仅用来获得 shell 的代码。shellcode 往往需要用汇编语言写，并转换成二进制机器码，其内容和长度经常还会受到很多苛刻限制，故开发和调试的难度很高。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x02-exploit&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x02-exploit&#34;&gt;#&lt;/a&gt; 0x02 Exploit&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;植入代码之前需要做大量的调试工作，例如，弄清楚程序有几个输入点，这些输入将最终会当作哪个函数的第几个参数读入到内存的哪一个区域，哪一个输入会造成栈溢出，在复制到栈区的时候对这些数据有没有额外的限制等。调试之后还要计算函数返回地址距离缓冲区的偏移并淹没之，选择指令的地址，最终制作出一个有攻击效果的 “承载” 着 shellcode 的输入字符串。这个代码植入的过程就是漏洞利用，也就是 exploit。&lt;/li&gt;
+&lt;li&gt;exploit 一般以一段代码的形式出现，用于生成攻击性的网络数据包或者其他形式的攻击性输入。expliot 的核心是淹没返回地址，劫持进程的控制权，之后跳转去执行 shellcode。与 shellcode 具有一定的通用性不同，exploit 往往是针对特定漏洞而言的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x03-shellcodeexploit&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x03-shellcodeexploit&#34;&gt;#&lt;/a&gt; 0x03 ShellCode&amp;amp;Exploit&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;两者之间的关系
+&lt;ul&gt;
+&lt;li&gt;漏洞利用的过程就好像一枚导弹飞向目标的过程。导弹的设计者关注的是怎样计算飞行路线，锁定目标，最终把弹头精确地运载到目的地并引爆，而并不关心所承载的弹头到底是用来在地上砸一个坑的铅球，还是用来毁灭一个国家的核弹头；这就如同 exploit 关心的是怎样淹没返回地址，获得进程控制权，把 EIP 传递给 shellcode 让其得到执行并发挥作用，而不关心 shellcode 到底是弹出一个消息框的恶作剧，还是用于格式化对方硬盘的穷凶极恶的代码。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x04-工具介绍-metasploit&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x04-工具介绍-metasploit&#34;&gt;#&lt;/a&gt; 0x04 工具介绍 - MetaSploit&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;设计思想：随着现代化软件开发技术的发展，模块化、封装、代码重用等思想在漏洞利用技术中也得以体现。试想如果仿照武器的设计思想，分开设计导弹和弹头，将各自的技术细节封装起来，使用标准化的接口，漏洞利用的过程将更容易实现。&lt;/li&gt;
+&lt;li&gt;Metasploit 通过规范化 exploit 和 shellcode 之间的接口把漏洞利用的过程封装成易用的模块，大大减少了 expliot 开发过程中的重复工作，深刻体现了代码重用和模块化、结构化的思想。在这个平台中：
+&lt;ol&gt;
+&lt;li&gt;所有的 exploit 都使用漏洞名称来命名，里边包含有这个漏洞的函数返回地址，所使用的跳转指令地址等关键信息。&lt;/li&gt;
+&lt;li&gt;将常用的 shellcode（例如，用于绑定端口反向连接、执行任意命令等）封装成一个个通用的模块，可以轻易地与任意漏洞的 exploit 进行组合。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="二进制" scheme="https://z-sy.github.io/categories/binary/" />
+        <category term="0day安全" scheme="https://z-sy.github.io/tags/0day%E5%AE%89%E5%85%A8/" />
+        <updated>2021-01-24T10:15:34.000Z</updated>
+    </entry>
     <entry>
         <id>https://z-sy.github.io/2021/01/21/penetration-test-2021-01-21-%E4%B8%BB%E5%8A%A8%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</id>
         <title>主动信息收集</title>

@@ -10,8 +10,84 @@
         </author>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Mon, 15 Mar 2021 10:48:46 +0800</pubDate>
-        <lastBuildDate>Mon, 15 Mar 2021 10:48:46 +0800</lastBuildDate>
+        <pubDate>Sun, 28 Mar 2021 16:56:55 +0800</pubDate>
+        <lastBuildDate>Sun, 28 Mar 2021 16:56:55 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://z-sy.github.io/2021/03/28/algorithm-2021-03-28-%E5%85%B3%E9%94%AE%E8%B7%AF%E5%BE%84/</guid>
+            <title>关键路径</title>
+            <link>https://z-sy.github.io/2021/03/28/algorithm-2021-03-28-%E5%85%B3%E9%94%AE%E8%B7%AF%E5%BE%84/</link>
+            <category term="算法" scheme="https://z-sy.github.io/categories/algorithm/" />
+            <category term="软考" scheme="https://z-sy.github.io/tags/%E8%BD%AF%E8%80%83/" />
+            <pubDate>Sun, 28 Mar 2021 16:56:55 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;勉励语 - 博学之，审问之，慎思之，明辨之，笃行之&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x01-什么是aov网&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x01-什么是aov网&#34;&gt;#&lt;/a&gt; 0x01 什么是 AOV 网&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;在一个表示工程的有向图中，用顶点表示活动，用弧表示活动之间的优先关系，这样的有向图为顶点表示活动的网，我们成为 AOV 网（Activity On Vertex Network）,AOV 网中的弧表示活动之间的某种约束关系。AOV 网中不存在回路（即无环的有向图）&lt;br /&gt;
+&lt;img data-src=&#34;https://img-blog.csdnimg.cn/20181207140814945.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NjgxNzc3,size_16,color_FFFFFF,t_70&#34; alt=&#34;AOV_image&#34; title=&#34;图片来自CSDN-不吃鱼的猫748博主&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x02-什么是aoe网&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x02-什么是aoe网&#34;&gt;#&lt;/a&gt; 0x02 什么是 AOE 网&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;在一个表示工程的带权有向图中，用顶点表示事件，用弧表示活动，用弧上的权值表示活动持续的时间，这种有向图的弧表示活动的网，我们称为 AOE 网（Activity On Edge Network）.AOE 网中没有入度的顶点称为始点或源点，没有出度的顶点叫做终点或汇点&lt;br /&gt;
+&lt;img data-src=&#34;https://img-blog.csdn.net/20131101084129453?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2FuZzM3OTI3NTYxNA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center&#34; alt=&#34;AOE_image&#34; title=&#34;图片来自CSDN-lwtb博主&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x03-aov网和aoe网的区别与联系&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x03-aov网和aoe网的区别与联系&#34;&gt;#&lt;/a&gt; 0x03 AOV 网和 AOE 网的区别与联系&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;AOV 网是顶点表示活动的网，它只描述了活动之间的约束关系，而 AOE 网是用有向边表示活动，边上的权值表示活动持续的时间。AOE 网是建立在 AOV 网基础之上（活动之间约束关系没有矛盾），再来分析完成整个工程至少需要多少时间，或者为缩短完成工程所需时间，应当加快哪些活动等问题。&lt;/li&gt;
+&lt;li&gt;路径各个活动所持续的时间之和称为路径长度，从源点到汇点具有最大路径长度的路径叫做关键路径，在关键路径上的活动叫做关键活动&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x04-关键路径的几个参数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x04-关键路径的几个参数&#34;&gt;#&lt;/a&gt; 0x04 关键路径的几个参数&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;事件的最早发生时间 etv（earliest time of vertex）: 即顶点 Vk 的最早发生时间&lt;/li&gt;
+&lt;li&gt;事件的最晚发生时间 ltv (lastest time of vertex): 即顶点 Vk 的最晚发生时间。也就是每个顶点对应事件最晚需要开始的时间，超出此时间将会延误整个工程&lt;/li&gt;
+&lt;li&gt;活动的最早开始时间 ete (earliset time of edge): 即弧 ak 的最早开始时间&lt;/li&gt;
+&lt;li&gt;活动的最晚开始时间 lte (lastest time of edge): 即弧 ak 的最晚开始时间，也就是不推迟工期的最晚开始时间&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;0x05-怎么理解参数中的最早&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x05-怎么理解参数中的最早&#34;&gt;#&lt;/a&gt; 0x05 怎么理解参数中的最早&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;最早一般从始点开始推，对于里程碑事件，到达它的路径可能有多条，但是我们只会取其中最大的一条，只有满足了这最大的一条路径开销，其它的小开销路径就一定会满足；反之，如果我们没有选择最大的开销路径，那么假设里程碑①到里程碑③比里程碑②到里程碑③所花费的路径开销大，里程碑③依赖里程碑①和里程碑②，但是里程碑③满足了不是最大的路径开销就开始了，但是里程碑③所依赖的里程碑①却还没有完成，所以这是矛盾的。因此我们计算最早应选抵达一个里程碑所需的最大开销&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x06-怎么理解参数中的最晚&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x06-怎么理解参数中的最晚&#34;&gt;#&lt;/a&gt; 0x06 怎么理解参数中的最晚&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;最晚一般从终点逆向往回推，假设对于里程碑③，反推的里程碑可能有里程碑④或里程碑⑤，两者所需的路径开销不同，那么计算里程碑③的最晚应该是选择路径开销最小的，可以这么理解，不论是里程碑④还是里程碑⑤，二者的依赖均是要求里程碑③完成，它们两个里程碑事件才能开始，如果假设里程碑③的最晚没有满足最小的路径开销，就会出现，以里程碑③为依赖的最小路径开销里程碑提前开始了，但是它所依赖的里程碑③却还没有开始，所以这是矛盾的。因此我们计算最晚，应选择逆推的最小路径开销&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;关键路径可能不止有一条&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;0x07-计算方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x07-计算方法&#34;&gt;#&lt;/a&gt; 0x07 计算方法&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;计算出关键路径的四个参数，然后对于关键路径 Ve (i) = Vl (i) 的里程碑即为关键路径；对于 e (i) = l (i) 的活动即为关键活动&lt;/li&gt;
+&lt;li&gt;计算 Ve (i)
+&lt;ul&gt;
+&lt;li&gt;从前往后，取大值 - 具体数值 = 直接前驱节点 Ve (i-1)+ 到达边的权值 (多个数值取最大值)&lt;/li&gt;
+&lt;li&gt;对于起始节点，其 Ve (i) = 0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;计算 Vl (i)
+&lt;ul&gt;
+&lt;li&gt;从后向前，取小值 - 具体数值 = 直接后继节点 Vl (i+1)- 发出边的权值 (多个数值取最小值)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;计算 e (i)
+&lt;ul&gt;
+&lt;li&gt;若活动 k 是由里程碑 i 到里程碑 j 标识，则活动 k 的最早开始时间应该等于里程碑 Ve (i) 的最早发生时间即 e (k)=Ve (i) 即该活动的发出顶点的最早发生时间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;计算 l (i)
+&lt;ul&gt;
+&lt;li&gt;若活动 k 是由里程碑 i 到里程碑 j 标识，则活动 K 的最晚开始时间应保证里程碑 j 的最晚发生时间不延后即 l (i)=Vl (j)-&amp;lt;Vi,Vj &amp;gt; 的权即里程碑 j 的最晚发生时间减去边的权值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;0x08-参考连接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x08-参考连接&#34;&gt;#&lt;/a&gt; 0x08 参考连接&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI2ODExMzkzL2FydGljbGUvZGV0YWlscy83NzgyMTk0NA==&#34;&gt;关键路径计算 - lwtb 博主&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVc1NDExczdBVz9mcm9tPXNlYXJjaCZhbXA7c2VpZD0xMjczODA3MDA3NTg2Njc5MTMwNg==&#34;&gt;关键路径（AOE - 网）- 你这个阶段你睡得着觉 UP 主&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://z-sy.github.io/2021/03/15/penetration-test-2021-03-15-%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/</guid>
             <title>缓冲区溢出</title>
@@ -925,16 +1001,6 @@
             <pubDate>Sat, 26 Dec 2020 18:18:22 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
 &lt;p&gt;本模块主要梳理总结学习的前端相关知识&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://z-sy.github.io/2020/12/26/binary-2020-12-26-binary-introduce/</guid>
-            <title>模块介绍</title>
-            <link>https://z-sy.github.io/2020/12/26/binary-2020-12-26-binary-introduce/</link>
-            <category term="二进制" scheme="https://z-sy.github.io/categories/binary/" />
-            <pubDate>Sat, 26 Dec 2020 18:18:21 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
-&lt;p&gt;本模块主要梳理总结二进制知识体系，较为繁杂&lt;/p&gt;
  ]]></description>
         </item>
     </channel>

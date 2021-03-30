@@ -8,7 +8,85 @@
     <author>
       <name>ysun</name>
     </author>
-    <updated>2021-03-28T15:32:37.000Z</updated>
+    <updated>2021-03-30T03:10:13.000Z</updated>
+    <entry>
+        <id>https://z-sy.github.io/2021/03/30/algorithm-2021-03-30-%E4%BA%8C%E5%8F%89%E6%A0%91/</id>
+        <title>二叉树</title>
+        <link rel="alternate" href="https://z-sy.github.io/2021/03/30/algorithm-2021-03-30-%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+        <content type="html">&lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;勉励语 - 绳锯木断，水滴石穿&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x01-什么是二叉树&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x01-什么是二叉树&#34;&gt;#&lt;/a&gt; 0x01 什么是二叉树&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;首先，二叉树是树形结构的一个重要类型，一般来说，满足以下两个条件的树就是二叉树：
+&lt;ol&gt;
+&lt;li&gt;本身是有序树&lt;/li&gt;
+&lt;li&gt;树中包含的各个节点的度不能超过 2，即只能是 0、1 或者 2&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;二叉树的递归定义为二叉树是一颗空树，或者是一棵由一个根节点和两棵互不相交的，分别称作根的左子树和右子树组成的非空树；左子树和右子树又同样都是二叉树&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x02-二叉树的基本形态&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x02-二叉树的基本形态&#34;&gt;#&lt;/a&gt; 0x02 二叉树的基本形态&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;空二叉树 - 什么都没有&lt;/li&gt;
+&lt;li&gt;只有一个根节点的二叉树&lt;/li&gt;
+&lt;li&gt;只有左子树&lt;/li&gt;
+&lt;li&gt;只有右子树&lt;/li&gt;
+&lt;li&gt;完全二叉树&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;特殊类型：[满二叉树]- 如果一棵二叉树只有度为零的节点和度为二的节点，并且度为零的节点都在同一层上，则称这颗二叉树为满二叉树；[完全二叉树]- 如果二叉树中除去最后一层节点为满二叉树，且最后一层的节点一次从左到右分布，则此二叉树被称为完全二叉树&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;0x03-二叉树的性质&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x03-二叉树的性质&#34;&gt;#&lt;/a&gt; 0x03 二叉树的性质&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;二叉树的第 i 层上至多有 2 的 (i-1) 次幂个节点&lt;/li&gt;
+&lt;li&gt;深度为 h 的二叉树中至多含有 2 的 h 次幂减 1 个节点&lt;/li&gt;
+&lt;li&gt;若在任意一颗二叉树中，有 n0 个叶子节点，有 n1 个度为 2 的节点，则必有 n0=n1+1&lt;/li&gt;
+&lt;li&gt;具有 n 个节点的完全二叉树深为 log 以 2 为底，(x+1) 的对数 - 其中 x 表示不大于 n 的最大整数&lt;/li&gt;
+&lt;li&gt;若对一颗有 n 个节点的完全二叉树进行顺序编号 i&amp;gt;=1 &amp;amp;&amp;amp; i&amp;lt;=n，那么对于 i (i&amp;gt;=1) 的节点：
+&lt;ol&gt;
+&lt;li&gt;当 i=1 时，该节点为根，它无双亲节点&lt;/li&gt;
+&lt;li&gt;当 i&amp;gt;1 时，该节点的双亲节点的编号为 i/2&lt;/li&gt;
+&lt;li&gt;若 2i&amp;lt;=n，则有编号为 2i 的左节点，否则没有左节点&lt;/li&gt;
+&lt;li&gt;若 2i+1&amp;lt;=n，则有编号为 2i+1 的右节点，否则没有右节点&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;0x04-二叉树的遍历&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x04-二叉树的遍历&#34;&gt;#&lt;/a&gt; 0x04 二叉树的遍历&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;遍历类型：
+&lt;ol&gt;
+&lt;li&gt;前序&lt;/li&gt;
+&lt;li&gt;中序&lt;/li&gt;
+&lt;li&gt;后序&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;一棵二叉树由根节点、左子树和右子树三部分组成，若规定 D、L、R 分别代表遍历根节点，遍历左子树，遍历右子树，则根据排列组合来看，二叉树的遍历方式有 6 种情况：DLR、DRL、LDR、LRD、RDL、RLD。从算法实现上来看，先遍历左子树与先遍历右子树并没有什么本质区别，所以，只需要讨论三种方式即可：
+&lt;ol&gt;
+&lt;li&gt;DLR - 前序遍历 - 根在前，从左往右，一棵树的根永远在左子树前面，左子树又永远在右子树前面&lt;/li&gt;
+&lt;li&gt;LDR - 中序遍历 - 根在中，从左往右，一棵树的左子树永远在根前面，根永远在右子树前面&lt;/li&gt;
+&lt;li&gt;LRD - 后序遍历 - 根在后，从左往右，一棵树的左子树永远在右子树前面，右子树永远在根前面&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x05-注意&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x05-注意&#34;&gt;#&lt;/a&gt; 0x05 注意&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;根是相对的，对于整棵树而言只有一个根，但对于每棵子树而言，又有自己的根。比如对于下面三个图，对于整棵树而言，A 是根，A 分别在最前面、中间、后面被遍历到。而对于 D，它是 G 和 H 的根，对于 D、G、H 这棵小树而言遍历顺序分别是 DGH、GDH、GHD；对于 C，它是 E 和 F 的根，三种排序的顺序分别为： CEF、ECF、EFC，可以说和 DLR、LDR、LRD 一模一样&lt;br /&gt;
+&lt;img data-src=&#34;https://haoqchen.site/img/in_post/go_through_binary_tree/pre.png&#34; alt=&#34;前序遍历图&#34; title=&#34;前序遍历-图片来自白夜行的狼博主&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://haoqchen.site/img/in_post/go_through_binary_tree/mid.png&#34; alt=&#34;中序遍历图&#34; title=&#34;中序遍历-图片来自白夜行的狼博主&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://haoqchen.site/img/in_post/go_through_binary_tree/back.png&#34; alt=&#34;后续遍历图&#34; title=&#34;后续遍历-图片来自白夜行的狼博主&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x06-参考连接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x06-参考连接&#34;&gt;#&lt;/a&gt; 0x06 参考连接&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTQlQkElOEMlRTUlOEYlODklRTYlQTAlOTEvMTYwMjg3OT9mcj1hbGFkZGlu&#34;&gt;百度百科&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oYW9xY2hlbi5zaXRlLzIwMTgvMDUvMjMvZ28tdGhyb3VnaC1iaW5hcnktdHJlZS8=&#34;&gt;白夜行的狼博主&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <category term="算法" scheme="https://z-sy.github.io/categories/algorithm/" />
+        <category term="数据结构" scheme="https://z-sy.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" />
+        <updated>2021-03-30T03:10:13.000Z</updated>
+    </entry>
     <entry>
         <id>https://z-sy.github.io/2021/03/28/algorithm-2021-03-28-%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%BF%A1%E5%87%BD%E7%BC%96%E7%A8%8B/</id>
         <title>格式化信函编程</title>
@@ -953,71 +1031,5 @@
         <category term="二进制" scheme="https://z-sy.github.io/categories/binary/" />
         <category term="0day安全" scheme="https://z-sy.github.io/tags/0day%E5%AE%89%E5%85%A8/" />
         <updated>2020-12-28T15:43:28.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://z-sy.github.io/2020/12/27/binary-2020-12-27-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-01/</id>
-        <title>0day安全温习-01</title>
-        <link rel="alternate" href="https://z-sy.github.io/2020/12/27/binary-2020-12-27-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-01/"/>
-        <content type="html">&lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;勉励语 - 精勤求学，敦笃励志&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;0x01-基础知识&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x01-基础知识&#34;&gt;#&lt;/a&gt; 0x01 基础知识&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;漏洞挖掘
-&lt;ul&gt;
-&lt;li&gt;安全性漏洞往往不会对软件本身功能造成很大影响，因此很难被 QA 工程师的功能性测试发现，对于进行 “正常操作” 的普通用户来说，更难体会到软件中的这类逻辑瑕疵。&lt;/li&gt;
-&lt;li&gt;从技术角度讲，所谓的漏洞挖掘更像是高级的 QA，一群精通二进制、汇编语言和操作系统底层知识的大手子没日没夜、精力旺盛的测试产品，寻找产品中的漏洞，敏锐的捕捉到程序中那些微笑细微的错误。大型的软件企业也会雇用一些安全专家来测试自己产品中的漏洞，这种测试工作可称 - Penetration test（攻击测试）；这些测试团队则被称做 Tiger team 或者 Ethic hacker。&lt;/li&gt;
-&lt;li&gt;工程界 - 普遍采用的方式是 Fuzz，实际是一种灰盒测试；学术界 - 侧重教导，一般采用静态分析。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;漏洞分析
-&lt;ul&gt;
-&lt;li&gt;分析漏洞时，如果能搜索到 POC 代码，就能重现漏洞现场；如果不能获得 POC，比较通用的方法是采用补丁比较器，比较 Patch 前后的可执行程序修改了哪些地方，然后再重点分析。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;漏洞利用
-&lt;ul&gt;
-&lt;li&gt;针对发现的漏洞，可部署相应的攻击代码测试代码，进行提权等操作。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&#34;0x02-常用短语&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x02-常用短语&#34;&gt;#&lt;/a&gt; 0x02 常用短语&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;何为&lt;span class=&#34;kbd&#34;&gt; 0DAY&lt;/span&gt; - 零日漏洞
-&lt;ul&gt;
-&lt;li&gt;未被公布，未被修复的漏洞。依次类推补丁刚刚发布的一段时间内，并非所有用户都能及时修复，故这种新公布的漏洞也有一定利用价值。有时把攻击这种刚刚被 patch 过的漏洞称为 1 day 攻击。（patch 发布后 1 天，叫做 1 day，5 天叫做 5 day，未发 patch 统称 0 day）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;何为&lt;span class=&#34;kbd&#34;&gt; CVE&lt;/span&gt;-&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2N2ZS5taXRyZS5vcmcv&#34;&gt; http://cve.mitre.org/&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;英文全称是 “Common Vulnerabilities &amp;amp; Exposures” 通用漏洞披露。CVE 就好像是一个字典表，为广泛认同的信息安全漏洞或者已经暴露出来的弱点给出一个公共的名称。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;何为&lt;span class=&#34;kbd&#34;&gt; POC&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;全称 &#39;Proof of Concept&#39;，中文概念验证，常指一段漏洞证明的代码。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;何为&lt;span class=&#34;kbd&#34;&gt; EXP&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;全称 &#39;Exploit&#39;，中文 &#39; 利用 &#39;，指利用系统漏洞进行攻击的动作。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;何为&lt;span class=&#34;kbd&#34;&gt; PayLoad&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;中文 &#39; 有效载荷 &#39;，指成功 exploit 之后真正在目标系统执行的代码或指令。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;何为&lt;span class=&#34;kbd&#34;&gt; ShellCode&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;简单翻译 &#39;Shell 代码 &#39;，是 Payload 的一种，由于其建立正向 / 反向 shell 而得名。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-</content>
-        <category term="二进制" scheme="https://z-sy.github.io/categories/binary/" />
-        <category term="0day安全" scheme="https://z-sy.github.io/tags/0day%E5%AE%89%E5%85%A8/" />
-        <updated>2020-12-27T15:17:07.000Z</updated>
     </entry>
 </feed>

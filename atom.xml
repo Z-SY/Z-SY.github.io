@@ -8,7 +8,17 @@
     <author>
       <name>ysun</name>
     </author>
-    <updated>2021-03-30T03:10:13.000Z</updated>
+    <updated>2021-04-04T16:01:07.000Z</updated>
+    <entry>
+        <id>https://z-sy.github.io/2021/04/05/diary-essay-2021-04-05-diary-introduce/</id>
+        <title>模块介绍</title>
+        <link rel="alternate" href="https://z-sy.github.io/2021/04/05/diary-essay-2021-04-05-diary-introduce/"/>
+        <content type="html">&lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
+&lt;p&gt;本模块主要记录生活中解决问题用到的技术的点点滴滴，方便回忆&lt;/p&gt;
+</content>
+        <category term="日常随笔" scheme="https://z-sy.github.io/categories/diary-essay/" />
+        <updated>2021-04-04T16:01:07.000Z</updated>
+    </entry>
     <entry>
         <id>https://z-sy.github.io/2021/03/30/algorithm-2021-03-30-%E4%BA%8C%E5%8F%89%E6%A0%91/</id>
         <title>二叉树</title>
@@ -955,81 +965,5 @@
         <category term="二进制" scheme="https://z-sy.github.io/categories/binary/" />
         <category term="0day安全" scheme="https://z-sy.github.io/tags/0day%E5%AE%89%E5%85%A8/" />
         <updated>2020-12-30T15:32:35.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://z-sy.github.io/2020/12/28/binary-2020-12-28-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-02/</id>
-        <title>0day安全温习-02</title>
-        <link rel="alternate" href="https://z-sy.github.io/2020/12/28/binary-2020-12-28-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-02/"/>
-        <content type="html">&lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;勉励语 - 风之积也不厚，则其负大翼也无力&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;0x01-基础&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x01-基础&#34;&gt;#&lt;/a&gt; 0x01 基础&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;PE 文件格式
-&lt;ul&gt;
-&lt;li&gt;PE 全称 - Portable Executable，是 Win32 平台下可执行文件遵守的数据格式。常见的可执行文件（如 “&lt;em&gt;.exe” 文件和 “&lt;/em&gt;.dll” 文件）都是典型的 PE 文件。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;PE 文件格式的数据节（section）
-&lt;ul&gt;
-&lt;li&gt;.text - 由编译器产生，存放着二进制的机器代码，也是我们反汇编和调试的对象&lt;/li&gt;
-&lt;li&gt;.data - 初始化的数据块，如宏定义、全局变量、静态变量等&lt;/li&gt;
-&lt;li&gt;.idata - 可执行文件所使用的动态链接库等外来函数与文件的信息&lt;/li&gt;
-&lt;li&gt;.rsrc - 存放程序的资源，如图标、菜单等&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;正常编译出的标准 PE 文件，其节信息往往是大致相同的。但这些 section 的名字只是为了方便人的记忆与使用，使用 Microsoft Visual C++ 中的编译指示符 #pragma dat a_seg () 可以把代码中的任意部分编译到 PE 的任意节中，节名也可以自己定义。如果可执行文件经过了 “加壳” 处理，PE 的节信息就会变得非常 “古怪”。在 Crack 和反病毒分析中需要经常处理这类古怪的 PE 文件&lt;/p&gt;
-&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;PE 与虚拟内存之间的映射
-&lt;ul&gt;
-&lt;li&gt;何为&lt;span class=&#34;kbd&#34;&gt;文件偏移地址&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;数据在 PE 文件中的地址叫文件偏移地址，个人认为叫做文件地址更加准确。这是文件在磁盘上存放时相对于文件开头的偏移。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;何为&lt;span class=&#34;kbd&#34;&gt;装载基址 - Image Base&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;PE 装入内存时的基地址。默认情况下，EXE 文件在内存中的基地址是 0x00400000，DLL 文件是 0x10000000。这些位置可以通过修改编译选项更改。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;何为&lt;span class=&#34;kbd&#34;&gt;虚拟内存地址 - Virtual Address，VA）&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;PE 文件中的指令被装入内存后的地址。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;何为&lt;span class=&#34;kbd&#34;&gt;相对虚拟地址（Relative Virtual Address，RVA）&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;相对虚拟地址是内存地址相对于映射基址的偏移量。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;VA= Image Base+ RVA&lt;/p&gt;
-&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;节偏移
-&lt;ul&gt;
-&lt;li&gt;产生原因 - 文件数据的存放单位与内存数据存放单位不同，文件 - 0x200；内存 - 0x1000h，对于两者不足单位的数据都会用 0x00 进行填充补全&lt;/li&gt;
-&lt;li&gt;换算公式
-&lt;ul&gt;
-&lt;li&gt;文件偏移地址 = 虚拟内存地址（VA）−装载基址（Image Base）−节偏移&lt;br /&gt;
- = RVA - 节偏移&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;在进行转换时，还有判断要转换的地址位于那个节内，然后减去相应的节偏移&lt;/p&gt;
-&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;工具推荐 -&lt;span class=&#34;kbd&#34;&gt;LordPE&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-</content>
-        <category term="二进制" scheme="https://z-sy.github.io/categories/binary/" />
-        <category term="0day安全" scheme="https://z-sy.github.io/tags/0day%E5%AE%89%E5%85%A8/" />
-        <updated>2020-12-28T15:43:28.000Z</updated>
     </entry>
 </feed>

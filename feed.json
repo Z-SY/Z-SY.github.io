@@ -7,6 +7,16 @@
     "home_page_url": "https://Z-SY.github.io",
     "items": [
         {
+            "id": "https://z-sy.github.io/2021/04/05/diary-essay-2021-04-05-diary-introduce/",
+            "url": "https://z-sy.github.io/2021/04/05/diary-essay-2021-04-05-diary-introduce/",
+            "title": "模块介绍",
+            "date_published": "2021-04-04T16:01:07.000Z",
+            "content_html": "<h1 id=\"0x00-开篇\"><a class=\"anchor\" href=\"#0x00-开篇\">#</a> 0x00 开篇</h1>\n<p>本模块主要记录生活中解决问题用到的技术的点点滴滴，方便回忆</p>\n",
+            "tags": [
+                "日常随笔"
+            ]
+        },
+        {
             "id": "https://z-sy.github.io/2021/03/30/algorithm-2021-03-30-%E4%BA%8C%E5%8F%89%E6%A0%91/",
             "url": "https://z-sy.github.io/2021/03/30/algorithm-2021-03-30-%E4%BA%8C%E5%8F%89%E6%A0%91/",
             "title": "二叉树",
@@ -209,17 +219,6 @@
             "title": "0day安全温习-03",
             "date_published": "2020-12-30T15:32:35.000Z",
             "content_html": "<h1 id=\"0x00-开篇\"><a class=\"anchor\" href=\"#0x00-开篇\">#</a> 0x00 开篇</h1>\n<ul>\n<li><span class=\"kbd\">勉励语 - 立志言为本，修身行乃先</span></li>\n</ul>\n<h1 id=\"0x01-逆向常用工具\"><a class=\"anchor\" href=\"#0x01-逆向常用工具\">#</a> 0x01 逆向常用工具</h1>\n<div class=\"note info\">\n<p>包括但不限于</p>\n</div>\n<ul>\n<li>动态分析工具\n<ul>\n<li>OllyDbg</li>\n</ul>\n</li>\n<li>静态分析工具\n<ul>\n<li>IDA Pro</li>\n</ul>\n</li>\n<li>二进制编辑器\n<ul>\n<li>UltraEdit</li>\n</ul>\n</li>\n</ul>\n<h1 id=\"0x02-栈溢出原理与实践\"><a class=\"anchor\" href=\"#0x02-栈溢出原理与实践\">#</a> 0x02 栈溢出原理与实践</h1>\n<ul>\n<li>何为<span class=\"kbd\">栈溢出</span>\n<ul>\n<li>简单来说，缓冲区溢出就是在大缓冲区中的数据向小缓冲区复制的过程中，由于没有注意小缓冲区的边界，“撑爆” 了较小的缓冲区，从而冲掉了和小缓冲区相邻内存区域的其它数据而引起的内存问题。</li>\n</ul>\n</li>\n</ul>\n<h1 id=\"0x03-两个寄存器esp和ebp\"><a class=\"anchor\" href=\"#0x03-两个寄存器esp和ebp\">#</a> 0x03 两个寄存器 ESP 和 EBP</h1>\n<pre><code>* ESP-栈指针寄存器(extended stack po inter)，其内存放着一个指针，该指针永远指向系统栈最上面一个栈帧的栈顶。\n* EBP-基址指针寄存器(extended base pointer)，其内存放着一个指针，该指针永远指向系统栈最上面一个栈帧的底部。\n</code></pre>\n<h1 id=\"0x04-函数调用过程\"><a class=\"anchor\" href=\"#0x04-函数调用过程\">#</a> 0x04 函数调用过程</h1>\n<pre><code>* 在形成函数栈帧一般要经历如下几个步骤：push操作进行参数入栈---&gt;call调用进行下一条返回地址的入栈操作并跳入调用函数的代码区---&gt;进入函数代码区后，一个push ebp记录当前栈帧，一个mov ebp，esp设置新栈帧的底部，一个sud esp，xxx抬高新栈帧的顶部，留出局部变量的空间。至此一个新栈帧形成。同理，函数返回步骤如下：保存返回值，通常放在EAX寄存器中---&gt;弹出当前栈帧，恢复上一个栈帧。具体操作-首先根据堆栈平衡，给ESP加上栈帧的大小，降低栈顶，回收当前栈帧空间，其次将当前栈帧底部保存的前栈帧EBP数值弹入EBP寄存器，恢复出上一个栈帧的栈帧底部，将保存的call调用的下一条指令地址弹给EIP寄存器。完成了一个新栈帧的生命周期，创建和释放。\n</code></pre>\n<div class=\"note info\">\n<p>进行缓冲出溢出实验注意事项 - 函数的调用约定和相关指令。一般，参数入栈顺序从右至左 - C、Syscall、Stdcall，其中 C 的恢复栈平衡位置在母函数，剩下的两个都在子函数。参数入栈顺序从左至右 - Basic、Fortran、Pascal，其恢复栈平衡的位置都在子函数中进行。在进行淹没溢出操作时候要注意！</p>\n</div>\n",
-            "tags": [
-                "二进制",
-                "0day安全"
-            ]
-        },
-        {
-            "id": "https://z-sy.github.io/2020/12/28/binary-2020-12-28-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-02/",
-            "url": "https://z-sy.github.io/2020/12/28/binary-2020-12-28-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-02/",
-            "title": "0day安全温习-02",
-            "date_published": "2020-12-28T15:43:28.000Z",
-            "content_html": "<h1 id=\"0x00-开篇\"><a class=\"anchor\" href=\"#0x00-开篇\">#</a> 0x00 开篇</h1>\n<ul>\n<li><span class=\"kbd\">勉励语 - 风之积也不厚，则其负大翼也无力</span></li>\n</ul>\n<h1 id=\"0x01-基础\"><a class=\"anchor\" href=\"#0x01-基础\">#</a> 0x01 基础</h1>\n<ol>\n<li>PE 文件格式\n<ul>\n<li>PE 全称 - Portable Executable，是 Win32 平台下可执行文件遵守的数据格式。常见的可执行文件（如 “<em>.exe” 文件和 “</em>.dll” 文件）都是典型的 PE 文件。</li>\n</ul>\n</li>\n<li>PE 文件格式的数据节（section）\n<ul>\n<li>.text - 由编译器产生，存放着二进制的机器代码，也是我们反汇编和调试的对象</li>\n<li>.data - 初始化的数据块，如宏定义、全局变量、静态变量等</li>\n<li>.idata - 可执行文件所使用的动态链接库等外来函数与文件的信息</li>\n<li>.rsrc - 存放程序的资源，如图标、菜单等</li>\n</ul>\n<div class=\"note info\">\n<p>正常编译出的标准 PE 文件，其节信息往往是大致相同的。但这些 section 的名字只是为了方便人的记忆与使用，使用 Microsoft Visual C++ 中的编译指示符 #pragma dat a_seg () 可以把代码中的任意部分编译到 PE 的任意节中，节名也可以自己定义。如果可执行文件经过了 “加壳” 处理，PE 的节信息就会变得非常 “古怪”。在 Crack 和反病毒分析中需要经常处理这类古怪的 PE 文件</p>\n</div>\n</li>\n<li>PE 与虚拟内存之间的映射\n<ul>\n<li>何为<span class=\"kbd\">文件偏移地址</span>\n<ul>\n<li>数据在 PE 文件中的地址叫文件偏移地址，个人认为叫做文件地址更加准确。这是文件在磁盘上存放时相对于文件开头的偏移。</li>\n</ul>\n</li>\n<li>何为<span class=\"kbd\">装载基址 - Image Base</span>\n<ul>\n<li>PE 装入内存时的基地址。默认情况下，EXE 文件在内存中的基地址是 0x00400000，DLL 文件是 0x10000000。这些位置可以通过修改编译选项更改。</li>\n</ul>\n</li>\n<li>何为<span class=\"kbd\">虚拟内存地址 - Virtual Address，VA）</span>\n<ul>\n<li>PE 文件中的指令被装入内存后的地址。</li>\n</ul>\n</li>\n<li>何为<span class=\"kbd\">相对虚拟地址（Relative Virtual Address，RVA）</span>\n<ul>\n<li>相对虚拟地址是内存地址相对于映射基址的偏移量。</li>\n</ul>\n</li>\n</ul>\n<div class=\"note info\">\n<p>VA= Image Base+ RVA</p>\n</div>\n</li>\n<li>节偏移\n<ul>\n<li>产生原因 - 文件数据的存放单位与内存数据存放单位不同，文件 - 0x200；内存 - 0x1000h，对于两者不足单位的数据都会用 0x00 进行填充补全</li>\n<li>换算公式\n<ul>\n<li>文件偏移地址 = 虚拟内存地址（VA）−装载基址（Image Base）−节偏移<br />\n = RVA - 节偏移</li>\n</ul>\n</li>\n</ul>\n<div class=\"note info\">\n<p>在进行转换时，还有判断要转换的地址位于那个节内，然后减去相应的节偏移</p>\n</div>\n<ul>\n<li>工具推荐 -<span class=\"kbd\">LordPE</span></li>\n</ul>\n</li>\n</ol>\n",
             "tags": [
                 "二进制",
                 "0day安全"

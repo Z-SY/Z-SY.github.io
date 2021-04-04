@@ -8,7 +8,44 @@
     <author>
       <name>ysun</name>
     </author>
-    <updated>2021-04-04T16:01:07.000Z</updated>
+    <updated>2021-04-04T16:11:50.000Z</updated>
+    <entry>
+        <id>https://z-sy.github.io/2021/04/05/diary-essay-2021-04-05-%E8%BF%9B%E7%A8%8B%E6%95%B0%E6%8D%AE%E7%9A%84%E8%AF%BB/</id>
+        <title>进程数据的读</title>
+        <link rel="alternate" href="https://z-sy.github.io/2021/04/05/diary-essay-2021-04-05-%E8%BF%9B%E7%A8%8B%E6%95%B0%E6%8D%AE%E7%9A%84%E8%AF%BB/"/>
+        <content type="html">&lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;勉励语 - 志士仁人，无求生以害仁，有杀身以成仁&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x01-万物之始&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x01-万物之始&#34;&gt;#&lt;/a&gt; 0x01 万物之始&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;计算机的世界里，程序所作的不过就是三件事，接收外部数据；格式化数据；输出数据。因此，所谓的外挂的原理总结来说，就是读取目标游戏 / 进程，然后提取出有价值的信息，进行标记或修改，达到对敌优势，例如：解析出 3D 人物的位置，进行辉光标记或外骨骼绘制，就轻易掌握了对手的位置；获取烟雾参数，对透明度 / 遮罩进行修改，就可达到烟雾透视效果；获取自身坐标位置，进行修改，可实现人物传送、闪现等功能；FPS 游戏中，对子弹和自身的健康数值进行锁定和修改，可达到无限子弹 / 锁血等效果。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x02-修改类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x02-修改类型&#34;&gt;#&lt;/a&gt; 0x02 修改类型&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;外部修改 - 与它所破解的游戏 / 程序不同，在单独的进程中运行的作弊行为&lt;/li&gt;
+&lt;li&gt;内部修改 - 可能 hack 了游戏程序，打了补丁，hook 了相关 dll&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;0x03-windows的apirpm-readprocessmemory和wpm-writeprocessmemory&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x03-windows的apirpm-readprocessmemory和wpm-writeprocessmemory&#34;&gt;#&lt;/a&gt; 0x03 Windows 的 API：RPM-ReadProcessMemory 和 WPM-WriteProcessMemory&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;RPM-ReadProcessMemory - 用来读取某一进程的数据，根据 MSDN 官网文档简介，参数如下
+&lt;ol&gt;
+&lt;li&gt;参数 - 1-hProcess：A handle to the process with memory that is being read. The handle must have PROCESS_VM_READ access to the process&lt;/li&gt;
+&lt;li&gt;参数 - 2-lpBaseAddress：A pointer to the base address in the specified process from which to read. Before any data transfer occurs, the system verifies that all data in the base address and memory of the specified size is accessible for read access, and if it is not accessible the function fails&lt;/li&gt;
+&lt;li&gt;参数 - 3-lpBuffer：A pointer to a buffer that receives the contents from the address space of the specified process&lt;/li&gt;
+&lt;li&gt;参数 - 4-nSize：The number of bytes to be read from the specified process&lt;/li&gt;
+&lt;li&gt;参数 - 5-*lpNumberOfBytesRead：A pointer to a variable that receives the number of bytes transferred into the specified buffer. If lpNumberOfBytesRead is NULL, the parameter is ignored&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;参数 5 一般可根据参数 4 就能判断，且可以为 NULL，所以一般不传，置 NULL&lt;/p&gt;
+&lt;/div&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;BOOL WINAPI &lt;span class=&#34;token function&#34;&gt;ReadProcessMemory&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  _In_  HANDLE  hProcess&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  _In_  LPCVOID lpBaseAddress&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  _Out_ LPVOID  lpBuffer&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  _In_  SIZE_T  nSize&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  _Out_ SIZE_T  &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;lpNumberOfBytesRead&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+        <category term="日常随笔" scheme="https://z-sy.github.io/categories/diary-essay/" />
+        <category term="Windows进程操作" scheme="https://z-sy.github.io/tags/Windows%E8%BF%9B%E7%A8%8B%E6%93%8D%E4%BD%9C/" />
+        <updated>2021-04-04T16:11:50.000Z</updated>
+    </entry>
     <entry>
         <id>https://z-sy.github.io/2021/04/05/diary-essay-2021-04-05-diary-introduce/</id>
         <title>模块介绍</title>
@@ -913,57 +950,5 @@
         <category term="算法" scheme="https://z-sy.github.io/categories/algorithm/" />
         <category term="编程珠玑" scheme="https://z-sy.github.io/tags/%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91/" />
         <updated>2021-01-02T00:40:30.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://z-sy.github.io/2020/12/30/binary-2020-12-30-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-03/</id>
-        <title>0day安全温习-03</title>
-        <link rel="alternate" href="https://z-sy.github.io/2020/12/30/binary-2020-12-30-0day%E5%AE%89%E5%85%A8%E6%B8%A9%E4%B9%A0-03/"/>
-        <content type="html">&lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;勉励语 - 立志言为本，修身行乃先&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;0x01-逆向常用工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x01-逆向常用工具&#34;&gt;#&lt;/a&gt; 0x01 逆向常用工具&lt;/h1&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;包括但不限于&lt;/p&gt;
-&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;动态分析工具
-&lt;ul&gt;
-&lt;li&gt;OllyDbg&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;静态分析工具
-&lt;ul&gt;
-&lt;li&gt;IDA Pro&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;二进制编辑器
-&lt;ul&gt;
-&lt;li&gt;UltraEdit&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;0x02-栈溢出原理与实践&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x02-栈溢出原理与实践&#34;&gt;#&lt;/a&gt; 0x02 栈溢出原理与实践&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;何为&lt;span class=&#34;kbd&#34;&gt;栈溢出&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;简单来说，缓冲区溢出就是在大缓冲区中的数据向小缓冲区复制的过程中，由于没有注意小缓冲区的边界，“撑爆” 了较小的缓冲区，从而冲掉了和小缓冲区相邻内存区域的其它数据而引起的内存问题。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;0x03-两个寄存器esp和ebp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x03-两个寄存器esp和ebp&#34;&gt;#&lt;/a&gt; 0x03 两个寄存器 ESP 和 EBP&lt;/h1&gt;
-&lt;pre&gt;&lt;code&gt;* ESP-栈指针寄存器(extended stack po inter)，其内存放着一个指针，该指针永远指向系统栈最上面一个栈帧的栈顶。
-* EBP-基址指针寄存器(extended base pointer)，其内存放着一个指针，该指针永远指向系统栈最上面一个栈帧的底部。
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;0x04-函数调用过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x04-函数调用过程&#34;&gt;#&lt;/a&gt; 0x04 函数调用过程&lt;/h1&gt;
-&lt;pre&gt;&lt;code&gt;* 在形成函数栈帧一般要经历如下几个步骤：push操作进行参数入栈---&amp;gt;call调用进行下一条返回地址的入栈操作并跳入调用函数的代码区---&amp;gt;进入函数代码区后，一个push ebp记录当前栈帧，一个mov ebp，esp设置新栈帧的底部，一个sud esp，xxx抬高新栈帧的顶部，留出局部变量的空间。至此一个新栈帧形成。同理，函数返回步骤如下：保存返回值，通常放在EAX寄存器中---&amp;gt;弹出当前栈帧，恢复上一个栈帧。具体操作-首先根据堆栈平衡，给ESP加上栈帧的大小，降低栈顶，回收当前栈帧空间，其次将当前栈帧底部保存的前栈帧EBP数值弹入EBP寄存器，恢复出上一个栈帧的栈帧底部，将保存的call调用的下一条指令地址弹给EIP寄存器。完成了一个新栈帧的生命周期，创建和释放。
-&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;进行缓冲出溢出实验注意事项 - 函数的调用约定和相关指令。一般，参数入栈顺序从右至左 - C、Syscall、Stdcall，其中 C 的恢复栈平衡位置在母函数，剩下的两个都在子函数。参数入栈顺序从左至右 - Basic、Fortran、Pascal，其恢复栈平衡的位置都在子函数中进行。在进行淹没溢出操作时候要注意！&lt;/p&gt;
-&lt;/div&gt;
-</content>
-        <category term="二进制" scheme="https://z-sy.github.io/categories/binary/" />
-        <category term="0day安全" scheme="https://z-sy.github.io/tags/0day%E5%AE%89%E5%85%A8/" />
-        <updated>2020-12-30T15:32:35.000Z</updated>
     </entry>
 </feed>

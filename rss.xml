@@ -10,8 +10,93 @@
         </author>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Mon, 05 Apr 2021 00:11:50 +0800</pubDate>
-        <lastBuildDate>Mon, 05 Apr 2021 00:11:50 +0800</lastBuildDate>
+        <pubDate>Sun, 18 Apr 2021 23:11:48 +0800</pubDate>
+        <lastBuildDate>Sun, 18 Apr 2021 23:11:48 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://z-sy.github.io/2021/04/18/diary-essay-2021-04-18-%E8%BF%9B%E7%A8%8B%E6%95%B0%E6%8D%AE%E7%9A%84%E5%86%99/</guid>
+            <title>进程数据的写</title>
+            <link>https://z-sy.github.io/2021/04/18/diary-essay-2021-04-18-%E8%BF%9B%E7%A8%8B%E6%95%B0%E6%8D%AE%E7%9A%84%E5%86%99/</link>
+            <category term="日常随笔" scheme="https://z-sy.github.io/categories/diary-essay/" />
+            <category term="Windows进程操作" scheme="https://z-sy.github.io/tags/Windows%E8%BF%9B%E7%A8%8B%E6%93%8D%E4%BD%9C/" />
+            <pubDate>Sun, 18 Apr 2021 23:11:48 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;勉励语 - 日日行，不怕千万里；常常做，不怕千万事&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x01-上帝之手&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x01-上帝之手&#34;&gt;#&lt;/a&gt; 0x01 上帝之手&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;保留&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://z-sy.github.io/2021/04/18/diary-essay-2021-04-18-E-R%E5%AE%9E%E4%BD%93%E8%81%94%E7%B3%BB%E6%A8%A1%E5%9E%8B/</guid>
+            <title>E-R实体联系模型</title>
+            <link>https://z-sy.github.io/2021/04/18/diary-essay-2021-04-18-E-R%E5%AE%9E%E4%BD%93%E8%81%94%E7%B3%BB%E6%A8%A1%E5%9E%8B/</link>
+            <category term="日常随笔" scheme="https://z-sy.github.io/categories/diary-essay/" />
+            <category term="软考" scheme="https://z-sy.github.io/tags/%E8%BD%AF%E8%80%83/" />
+            <pubDate>Sun, 18 Apr 2021 22:45:18 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;勉励语 - 逝者如斯夫，不舍昼夜&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x01-概念&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x01-概念&#34;&gt;#&lt;/a&gt; 0x01 概念&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;实体（Entity）- 指客观存在的可以相互区别的事务。可以是具体的对象，如一个工厂职工、一辆汽车等；也可以是抽象的事件，例如一次借书、一场足球赛等&lt;/li&gt;
+&lt;li&gt;属性（Attribute）- 实体有很多特性，每一个特性称为属性。每一个属性有一个值域，其类型可以是整数型、实数型、字符串型。比如学生（实体），其属性有学号、姓名、年龄、性别等属性，相应值域为字符、字符串、整数和字符串性&lt;/li&gt;
+&lt;li&gt;联系（Relationship）
+&lt;ul&gt;
+&lt;li&gt;1：1 联系 - 如果实体集 E1 中的每个实体最多只能和实体集 E2 中的一个实体有联系，反之亦然，那么实体集 E1 对 E2 的联系称为 “一对一联系”，记为 “1：1”&lt;/li&gt;
+&lt;li&gt;1：N 联系 - 如果实体集 E1 中每个实体与实体集 E2 中任意个（零个或多个）实体有联系，而 E2 中每个实体最多和 E1 中的一个实体有联系，那么 E1 对 E2 的联系是 “一对多联系”，记为 “1：N”&lt;/li&gt;
+&lt;li&gt;M：N 联系 - 如果实体集 E1 中每个实体与实体集 E2 中任意个（零个或多个）实体有联系，反之亦然，那么 E1 对 E2 的联系是 “多对多联系”，即为 “M：N”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://z-sy.github.io/2021/04/18/diary-essay-2021-04-18-%E6%95%B0%E6%8D%AE%E6%B5%81%E5%9B%BE%E8%AE%BE%E8%AE%A1/</guid>
+            <title>数据流图设计</title>
+            <link>https://z-sy.github.io/2021/04/18/diary-essay-2021-04-18-%E6%95%B0%E6%8D%AE%E6%B5%81%E5%9B%BE%E8%AE%BE%E8%AE%A1/</link>
+            <category term="日常随笔" scheme="https://z-sy.github.io/categories/diary-essay/" />
+            <category term="软考" scheme="https://z-sy.github.io/tags/%E8%BD%AF%E8%80%83/" />
+            <pubDate>Sun, 18 Apr 2021 19:57:16 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;勉励语 - 君子耻其言而过其行&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;0x01-基本符号&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x01-基本符号&#34;&gt;#&lt;/a&gt; 0x01 基本符号&lt;/h1&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;不贴图了，还得 P（狗头保命🤡）&lt;/p&gt;
+&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;⚪- 表示加工 - 在圆内说明加工的名字和编号&lt;/li&gt;
+&lt;li&gt;→- 表示数据流 - 在箭头边给出数据流的名称和编号&lt;/li&gt;
+&lt;li&gt;两个下划线，一进一出的箭头 - 表示数据存储文件 - 文件名称为名词或名词性短语&lt;/li&gt;
+&lt;li&gt;长方形 - 表示数据源点或汇点 - 在方框内注明源点或汇点的名称&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;0x02-设计原则&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x02-设计原则&#34;&gt;#&lt;/a&gt; 0x02 设计原则&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;自外向内，自顶向下，逐层细化，完善求精&lt;/li&gt;
+&lt;li&gt;保持父图和子图的平衡&lt;/li&gt;
+&lt;li&gt;保持数据守恒 - 任何的加工要有输入和输出&lt;/li&gt;
+&lt;li&gt;加工细节隐蔽&lt;/li&gt;
+&lt;li&gt;简化加工间的关系&lt;/li&gt;
+&lt;li&gt;均匀分解&lt;/li&gt;
+&lt;li&gt;适当地为数据流、加工、文件、源 / 宿命名，名字应反应该成分的实际意义，避免空洞的名字&lt;/li&gt;
+&lt;li&gt;忽略细枝末节&lt;/li&gt;
+&lt;li&gt;表现的是数据流而不是控制流&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;0x03-数据字典&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x03-数据字典&#34;&gt;#&lt;/a&gt; 0x03 数据字典&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;“=”- 代表被定义为&lt;/li&gt;
+&lt;li&gt;“+”- 代表与，例 “x=a+b” 代表 x 是由 a 和 b 组成&lt;/li&gt;
+&lt;li&gt;“[... ，...] 或 [... | ...]”- 代表或，例 “x=[a , b]” 代表 x 由 a 或 b 组成&lt;/li&gt;
+&lt;li&gt;“{...}”- 代表重复，例 “x={a}” 代表 x 由 0 个 a 或者多个 a 组成&lt;/li&gt;
+&lt;li&gt;“(...)”- 代表可选，例 “x=(a)” 代表 a 可在 x 中出现也可以不出现&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://z-sy.github.io/2021/04/05/diary-essay-2021-04-05-%E8%BF%9B%E7%A8%8B%E6%95%B0%E6%8D%AE%E7%9A%84%E8%AF%BB/</guid>
             <title>进程数据的读</title>
@@ -859,112 +944,6 @@
 &lt;li&gt;本文主要摘选自&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vc29uZ2xlZS9wLzU3MzgxNDYuaHRtbA==&#34;&gt;神奕&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
  ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://z-sy.github.io/2021/01/03/penetration-test-2021-01-03-BurpSuite/</guid>
-            <title>BurpSuite</title>
-            <link>https://z-sy.github.io/2021/01/03/penetration-test-2021-01-03-BurpSuite/</link>
-            <category term="渗透测试" scheme="https://z-sy.github.io/categories/penetration-test/" />
-            <category term="BurpSuite" scheme="https://z-sy.github.io/tags/BurpSuite/" />
-            <pubDate>Sun, 03 Jan 2021 17:36:26 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;勉励语 - 书山有路勤为径，学海无涯苦作舟&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;0x01-介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x01-介绍&#34;&gt;#&lt;/a&gt; 0x01 介绍&lt;/h1&gt;
-&lt;p&gt;BurpSuite 是进行 Web 应用安全测试集成平台。它将各种安全工具无缝地融合在一起，以支持整个测试过程中，从最初的映射和应用程序的攻击面分析，到发现和利用安全漏洞。其模块几乎包含整个安全测试过程，从最初对目标程序的信息采集，到漏洞扫描及其利用，多模块间高融合的配合，使得安全测试的过程更加高效。&lt;/p&gt;
-&lt;h1 id=&#34;0x02-主要模块&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x02-主要模块&#34;&gt;#&lt;/a&gt; 0x02 主要模块&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;Dashboard&lt;/li&gt;
-&lt;li&gt;Proxy&lt;/li&gt;
-&lt;li&gt;Intruder&lt;/li&gt;
-&lt;li&gt;Repeater&lt;/li&gt;
-&lt;li&gt;Decoder&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&#34;0x03-模块简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x03-模块简介&#34;&gt;#&lt;/a&gt; 0x03 模块简介&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Proxy&lt;/span&gt; - 代理模块作为 BurpSuite 的核心功能，拦截 HTTP/S 的代理服务器，作为一个在浏览器和目标应用程序之间的中间人，允许拦截，查看，修改在两个方向上的原始数据流。
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;intercept 选项&lt;/span&gt; - 用于显示修改 HTTP 请求及响应内容，并可以将拦截的 HTTP 请求快速发送至其他模块处理。
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Forward&lt;/span&gt; - 用于发送数据。当把所需要的 HTTP 请求编辑编辑完成后，手动发送数据。&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Drop&lt;/span&gt; - 将该请求包丢弃。&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Intercept is off/on&lt;/span&gt; - 拦截开关。当处于 off 状态下时，BurpSuite 会自动转发所拦截的所有请求；当处于 on 状态下时，BurpSuite 会将所有拦截所有符合规则的请求并将它显示出来等待编辑或其他操作。&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Action&lt;/span&gt; - 功能菜单，与右键菜单内容相同，在这可以将请求包发送到其他的模块或者对数据包进行其他的操作。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;http history 选项&lt;/span&gt; - 这里将记录经过代理服务器访问的所有请求，即使当 Intercept is off 时也会记录。记录包括：#(请求索引号)、Host (主机)、Method (请求方式)、URL (请求地址)、Params (参数)、Edited (编辑)、Status (状态)、Length (响应字节长度)、MIME type (响应的 MLME 类型)、Extension (地址文件扩展名)、Title (页面标题)、Comment (注释)、SSL、IP (目标 IP 地址)、Cookies、Time (发出请求时间)、Listener port (监听端口)。&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;WebSockets history 选项&lt;/span&gt; - 用于记录 WebSockets 的数据包，是 HTML5 中最强大的通信功能，定义了一个全双工的通信信道，只需 Web 上的一个 Socket 即可进行通信，能减少不必要的网络流量并降低网络延迟。&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Options 选项&lt;/span&gt; - 主要用于设置代理监听、请求和响应，拦截反应，匹配和替换，ssl 等。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;在 BurpSuite 任何请求处，右键菜单选择 “Send to intruder” 选项，将自动发送到此模块下并自动相关内容。&lt;/p&gt;
-&lt;/div&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Intruder&lt;/span&gt; - 用于自动对 Web 应用程序自定义的攻击。它可以用来自动执行您的测试过程中可能出现的所有类型的任务。例如目录爆破，注入，密码爆破等。
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Target 选项&lt;/span&gt; - 用于配置目标服务器进行攻击的详细信息。
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Host&lt;/span&gt; - 这是目标服务器的 IP 地址或主机名。&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Port&lt;/span&gt; - 这是目标服务的端口号。&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Use HTTPS&lt;/span&gt; - 这指定的 SSL 是否应该被使用.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Positions 选项&lt;/span&gt; - 设置 Payloads 的插入点以及攻击类型（攻击模式）。&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Payloads 选项&lt;/span&gt; - 设置 payload，配置字典。&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Opetions 选项&lt;/span&gt; - 此选项卡包含了 request headers，request engine，attack results ，grep match，grep_extrack，grep payloads 和 redirections。可以发动攻击之前，在主要 Intruder 的 UI 上编辑这些选项，大部分设置也可以在攻击时对已在运行的窗口进行修改。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Repeater&lt;/span&gt; - 用于手动操作和发送个别 HTTP 请求，并分析应用程序的响应一个简单的工具。可以发送一个内部请求从 Burp 任何地方到 Repeater，修改请求并且发送。&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;Decoder&lt;/span&gt; - 将原始数据转换成各种编码和哈希表的简单工具。它能够智能地识别多种编码格式采用启发式技术。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&#34;0x04-补充链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x04-补充链接&#34;&gt;#&lt;/a&gt; 0x04 补充链接&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;本文主要摘选自&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vanNqbGl5YW5nL3AvMTA4NTMzMDcuaHRtbA==&#34;&gt; BurpSuite pro v2.0 使用入门教程&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://z-sy.github.io/2021/01/03/penetration-test-2021-01-03-penetration-test-introduce/</guid>
-            <title>模块介绍</title>
-            <link>https://z-sy.github.io/2021/01/03/penetration-test-2021-01-03-penetration-test-introduce/</link>
-            <category term="渗透测试" scheme="https://z-sy.github.io/categories/penetration-test/" />
-            <pubDate>Sun, 03 Jan 2021 17:36:25 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
-&lt;p&gt;本模块主要分享总结渗透测试的相关知识&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://z-sy.github.io/2021/01/02/algorithm-2021-01-02-%E4%B8%80%E6%AC%A1%E5%8F%8B%E5%A5%BD%E7%9A%84%E5%AF%B9%E8%AF%9D/</guid>
-            <title>一次友好的对话</title>
-            <link>https://z-sy.github.io/2021/01/02/algorithm-2021-01-02-%E4%B8%80%E6%AC%A1%E5%8F%8B%E5%A5%BD%E7%9A%84%E5%AF%B9%E8%AF%9D/</link>
-            <category term="算法" scheme="https://z-sy.github.io/categories/algorithm/" />
-            <category term="编程珠玑" scheme="https://z-sy.github.io/tags/%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91/" />
-            <pubDate>Sat, 02 Jan 2021 08:40:30 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;0x00-开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x00-开篇&#34;&gt;#&lt;/a&gt; 0x00 开篇&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;勉励语 - 非淡泊无以明志，非宁静无以致远&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;0x01-问题-一次友好的对话&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x01-问题-一次友好的对话&#34;&gt;#&lt;/a&gt; 0x01 问题 - 一次友好的对话&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;输入 - 一个最多包含 n 个正整数的文件，每个数都小于 n，其中 n=10^7。如果在输入文件中有任何整数重复出现就是致命错误。没有其他数据与该整数相关联。&lt;/li&gt;
-&lt;li&gt;输出 - 按升序排列的输入整数的列表&lt;/li&gt;
-&lt;li&gt;约束 - 最多大约有 1MB 的内存空间可用，有充足的磁盘存储空间可用。运行时间最多几分钟，运行时间 10S 就不需要进一步优化了。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;0x02-问题分析&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x02-问题分析&#34;&gt;#&lt;/a&gt; 0x02 问题分析&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;常见方式一般的以基于磁盘的&lt;span class=&#34;kbd&#34;&gt;归并排序&lt;/span&gt;为起点，但需对其进行调整，由于是对整数进行排序，可将原来两百行的程序减少为十几行，且一般归并排序要用到中间文件，程序将运行的更快，但是完成程序可能仍然需要几天时间。&lt;/li&gt;
-&lt;li&gt;另一种解决方案利用该问题的特殊性。如果每个号码都使用 7 字节来存储，那么在可用的 1MB 存储空间大约可存 143000 个号码。如果每个号码都使用 32 位整数来表示的话，在 1MB 的存储空间里就可以存储 250000 个号码。因此，可重复遍历输入文件 40 趟来完成排序。第一趟 - 0 至 249999；第二趟 - 250000 至 499999 依此类推。对于内存中的排序来讲&lt;span class=&#34;kbd&#34;&gt;快速排序&lt;/span&gt;相当高效，且该程序拥有所希望的特性 - 不必考虑使用中间磁盘文件，但为此付出的代价是读取输入文件 40 次。&lt;/li&gt;
-&lt;li&gt;综上两方优点 - 我们想要的读输入文件一次，且不使用中间文件。最终，问题归结为能否能够用大约 800 万个可用位来表示最多 1000 万个互异的整数。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;0x03-应用算法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0x03-应用算法&#34;&gt;#&lt;/a&gt; 0x03 应用算法&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;位图算法。BitMap 算法的核心思想是用 bit 数组来记录 0-1 两种状态，然后再将具体数据映射到这个比特数组的具体位置，这个比特位设置成 0 表示数据不存在，设置成 1 表示数据存在。&lt;/li&gt;
-&lt;li&gt;BitMap 算在在大量数据查询、去重等应用场景中使用的比较多，这个算法具有比较高的空间利用率。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&#34;highlight c&#34;&gt;&lt;figcaption data-lang=&#34;c&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;/* 伪代码 */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;/* phase 1: initialize set to empty */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;n&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  bit&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;/* phase 2: insert present elements into the set */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; each i in the input file&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  bit&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;/* phase 3: write sorted output */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;n&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; bit&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    write i on the output file&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
     </channel>
 </rss>
